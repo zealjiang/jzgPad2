@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_40"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#EEEEEE">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="品牌"
+            android:textSize="@dimen/SP_16_L"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="胎宽"
+            android:textSize="@dimen/SP_16_L"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="扁平比"
+            android:textSize="@dimen/SP_16_L"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="直径"
+            android:textSize="@dimen/SP_16_L"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="年份"
+            android:textSize="@dimen/SP_16_L"
+            />
+        <!--<TextView-->
+            <!--android:id="@+id/tv_finish"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="完成"-->
+            <!--android:textColor="#24AD9D"-->
+            <!--android:textSize="@dimen/SP_18_L" />-->
+    </LinearLayout>
+
+    <!--此部分需要完整复制过去，删减或者更改ID会导致初始化找不到内容而报空-->
+    <LinearLayout
+        android:id="@+id/optionspicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <com.jcpt.jzg.padsystem.widget.wheel.WheelView
+            android:id="@+id/options1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pickerview_textColorCenter="#24AD9D"
+            app:pickerview_dividerColor="#24AD9D"
+            android:layout_weight="1" />
+
+        <com.jcpt.jzg.padsystem.widget.wheel.WheelView
+            android:id="@+id/options2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pickerview_textColorCenter="#24AD9D"
+            app:pickerview_dividerColor="#24AD9D"
+            android:layout_weight="1" />
+
+        <com.jcpt.jzg.padsystem.widget.wheel.WheelView
+            android:id="@+id/options3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pickerview_textColorCenter="#24AD9D"
+            app:pickerview_dividerColor="#24AD9D"
+            android:layout_weight="1" />
+        <com.jcpt.jzg.padsystem.widget.wheel.WheelView
+            android:id="@+id/options4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pickerview_textColorCenter="#24AD9D"
+            app:pickerview_dividerColor="#24AD9D"
+            android:layout_weight="1" />
+        <com.jcpt.jzg.padsystem.widget.wheel.WheelView
+            android:id="@+id/options5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pickerview_textColorCenter="#24AD9D"
+            app:pickerview_dividerColor="#24AD9D"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#24ad9d" />
+
+    <TextView
+        android:id="@+id/tv_finish"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_50"
+        android:background="#E5E9EC"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="#24AD9D"
+        android:textSize="@dimen/SP_18_L" />
+
+</LinearLayout>

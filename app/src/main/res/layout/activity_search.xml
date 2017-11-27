@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:layout_height="50dp">
+
+        <com.jcpt.jzg.padsystem.widget.ClearableEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tvCancel"
+            android:layout_marginLeft="@dimen/DIP_8"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch|flagNoExtractUi"
+            android:maxLength="50"
+            android:minWidth="@dimen/DIP_200_L"
+            android:paddingLeft="@dimen/DIP_8"
+            android:paddingRight="@dimen/DIP_8"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/common_text_gray_dark"
+            android:textSize="@dimen/SP_13_L" />
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="@string/cancel"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/DIP_16"
+        android:paddingLeft="@dimen/DIP_16"
+        android:paddingRight="@dimen/DIP_16"
+        android:paddingTop="@dimen/DIP_5"
+        app:isLoadMore="true"
+        app:overlay="false"
+        app:wave_show="false">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvTaskClaimList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.cjj.MaterialRefreshLayout>
+
+
+</LinearLayout>

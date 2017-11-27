@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tanchu"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_title"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/DIP_10"
+        android:paddingTop="@dimen/DIP_10"
+        android:text="登记日期"
+        android:textSize="@dimen/SP_20_L" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_below="@id/date_title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/long_line" />
+
+    <LinearLayout
+        android:id="@+id/tiaojian"
+        android:layout_below="@id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIP_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/all_date_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_round_gray"
+            android:gravity="center"
+            android:text="全部日期" />
+
+        <TextView
+            android:id="@+id/today_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_round_gray"
+            android:gravity="center"
+            android:text="今天" />
+
+        <TextView
+            android:id="@+id/tomorrow_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_round_gray"
+            android:gravity="center"
+            android:text="昨天" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/date_show_text"
+        android:layout_below="@id/tiaojian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/DIP_10"
+        android:paddingTop="@dimen/DIP_10"
+        android:text="fsfdsfddsfd" />
+
+    <DatePicker
+        android:id="@+id/date_datepicker"
+        android:layout_below="@id/date_show_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/date_cancel_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_queding"
+            android:gravity="center"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/date_affirm_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_queding"
+            android:gravity="center"
+            android:text="确定" />
+    </LinearLayout>
+
+</RelativeLayout>

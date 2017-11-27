@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIP_20"
+        android:layout_marginBottom="@dimen/DIP_20"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/defectTypeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:text="表面缺陷"
+            android:textColor="@color/common_blue_dark"
+            android:textSize="@dimen/text_medium_16sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="8">
+            <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                android:id="@+id/tagFlowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:id="@+id/llPhotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIP_5"
+                android:layout_marginTop="@dimen/DIP_5"
+                android:visibility="gone">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_defect1"
+                    android:layout_height="@dimen/DIP_80_L"
+                    android:layout_width="@dimen/DIP_100_L"
+                    style="@style/simpledraweeview"/>
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_defect2"
+                    style="@style/simpledraweeview"
+                    android:layout_height="@dimen/DIP_80_L"
+                    android:layout_width="@dimen/DIP_100_L"
+                    android:layout_marginLeft="@dimen/DIP_10"
+                    android:layout_toRightOf="@+id/sdv_defect1"/>
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_defect3"
+                    style="@style/simpledraweeview"
+                    android:layout_height="@dimen/DIP_80_L"
+                    android:layout_width="@dimen/DIP_100_L"
+                    android:layout_marginLeft="@dimen/DIP_10"
+                    android:layout_toRightOf="@+id/sdv_defect2"/>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/sdv_defect1"
+                    android:layout_marginTop="@dimen/DIP_5"/>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/gray_line_middle"/>
+
+</LinearLayout>

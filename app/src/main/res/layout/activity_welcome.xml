@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_bg_gray"
+                android:padding="@dimen/activity_vertical_margin"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingBottom="@dimen/DIP_20"
+            android:paddingTop="@dimen/DIP_20"
+            android:text="欢迎使用精真估车辆检测系统！"
+            android:textColor="@color/common_theme_blue"
+            android:textSize="@dimen/SP_42_L"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIP_100_L"
+            android:layout_marginRight="@dimen/DIP_100_L"
+            >
+
+            <TextView
+                android:id="@+id/tvTaskClaim"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/DIP_100_L"
+                android:background="@drawable/text_task_claim_bg"
+                android:drawablePadding="@dimen/DIP_20"
+                android:drawableTop="@drawable/icon_renwu"
+                android:gravity="center"
+                android:padding="@dimen/DIP_20"
+                android:text="任务认领"
+                android:textColor="@color/white"
+                android:textSize="@dimen/SP_35_L"
+                />
+
+            <TextView
+                android:id="@+id/tvMyTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/text_my_task_bg"
+                android:drawablePadding="@dimen/DIP_20"
+                android:drawableTop="@drawable/icon_woderenwu"
+                android:gravity="center"
+                android:padding="@dimen/DIP_20"
+                android:text="我的任务"
+                android:textColor="@color/white"
+                android:textSize="@dimen/SP_35_L"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

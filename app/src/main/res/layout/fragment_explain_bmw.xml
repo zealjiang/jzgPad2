@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/btn_next_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_gray_dark_middle"
+                android:padding="@dimen/DIP_8"
+                android:text="车辆建议评估价格"
+                android:textColor="@color/black_font"
+                android:textSize="@dimen/text_medium_14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="整备前价格"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（B to B）"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_small_12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.4"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etBuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/DIP_30"
+                        android:background="@null"
+                        android:hint="精确到小数点后2位"
+                        android:imeOptions="actionNext|flagNoExtractUi"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:textColorHint="@color/global_gray_2"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/DIP_40"
+                        android:layout_marginRight="@dimen/DIP_40"
+                        android:gravity="center"
+                        android:text="@string/ten_thousand"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="按OCU标准整备后价格"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（B to B）"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_small_12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.4"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etSale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/DIP_30"
+                        android:background="@null"
+                        android:hint="精确到小数点后2位"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:textColorHint="@color/global_gray_2"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/DIP_40"
+                        android:layout_marginRight="@dimen/DIP_40"
+                        android:gravity="center"
+                        android:text="@string/ten_thousand"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_gray_dark_middle"
+                android:padding="@dimen/DIP_8"
+                android:text="在BMW/MINI授权经销商外的维修"
+                android:textColor="@color/black_font"
+                android:textSize="@dimen/text_medium_14sp" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwOtherCheckItemView
+                android:id="@+id/itemView_yes_or_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:label="是否有BMW/MINI授权经销商外的维修" />
+
+            <LinearLayout
+                android:id="@+id/ll_repair_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/divider"
+                    android:orientation="horizontal"
+                    android:showDividers="middle">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:text="维修时间"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/SP_14_L" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:text="主要维修项目"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/SP_14_L" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:text="金额（￥0.00）"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/SP_14_L" />
+
+                    <TextView
+                        android:id="@+id/tvAdd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:text="增加记录"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/SP_14_L" />
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/viewLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray_line_middle" />
+                <LinearLayout
+                    android:id="@+id/ll_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_next_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_blue_bg"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large_18sp"
+        zhy:ripple_color="@color/common_blue_dark"
+        zhy:unpressed_color="@color/common_btn_blue" />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_blue_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/DIP_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvleft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIP_20"
+            android:layout_marginRight="@dimen/DIP_20"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_white_bg"
+            android:gravity="center"
+            android:text="left"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_medium_16sp" />
+
+
+        <TextView
+            android:id="@+id/tvright"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIP_20"
+            android:layout_marginRight="@dimen/DIP_20"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_btn_white_bg"
+            android:gravity="center"
+            android:text="right"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_medium_16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/DIP_10"
+                android:text="照片拍摄不全，无法进入下一环节"
+                android:textColor="@color/white"
+                android:textSize="@dimen/SP_20_L"
+                android:layout_centerInParent="true"
+                />
+
+
+    </RelativeLayout>
+</RelativeLayout>

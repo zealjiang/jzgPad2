@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvNoKeyPointOptions"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/DIP_20"/>
+
+            <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+                android:id="@+id/crbtnNextStep"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_60_L"
+                android:text="下一步"
+                android:textSize="@dimen/text_large_18sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/btn_blue_bg"
+                zhy:unpressed_color="@color/common_btn_blue"
+                zhy:ripple_color="@color/common_blue_dark"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+</LinearLayout>

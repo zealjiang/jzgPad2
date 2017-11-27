@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_white_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/DIP_6"
+        android:paddingTop="@dimen/DIP_6">
+
+        <TextView
+            android:id="@+id/tvleft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIP_20"
+            android:layout_marginRight="@dimen/DIP_20"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_bg1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP_18_L" />
+
+
+        <TextView
+            android:id="@+id/tvright"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIP_20"
+            android:layout_marginRight="@dimen/DIP_20"
+            android:layout_weight="1"
+            android:background="@drawable/btn_red_bg1"
+            android:gravity="center"
+            android:text="确认退回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP_18_L" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lyButton"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPhingguNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/DIP_10"
+            android:text="评估编号：JZG12345678"
+            android:textColor="@color/black_font"
+            android:textSize="@dimen/SP_14_L" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/DIP_10"
+            android:paddingLeft="@dimen/DIP_10"
+            android:paddingRight="@dimen/DIP_10"
+            android:text="注：订单退回后，与该任务相关的检测数据将被清除"
+            android:textColor="@color/red"
+            android:textSize="@dimen/SP_14_L" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_1_L"
+            android:background="@color/gray_line_middle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/DIP_10"
+            android:paddingTop="@dimen/DIP_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退回原因："
+                android:textColor="@color/black_font"
+                android:textSize="@dimen/SP_14_L" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                    android:id="@+id/tflReturnReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    zhy:max_select="1" />
+
+                <EditText
+                    android:id="@+id/edBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dialog_white_bg"
+                    android:gravity="top|left"
+                    android:hint="请输入其他原因..."
+                    android:imeOptions="actionDone|flagNoExtractUi"
+                    android:maxLength="50"
+                    android:textSize="@dimen/SP_14_L" />
+                <LinearLayout
+                    android:id="@+id/getfocus"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal" >
+                    <requestFocus />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

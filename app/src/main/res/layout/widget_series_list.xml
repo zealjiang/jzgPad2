@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/series_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/common_gray_line"
+        android:dividerHeight="@dimen/dividerHeight"
+        android:listSelector="@drawable/layout_click"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@+id/viewFragReload"
+        layout="@layout/view_frag_reload"
+        android:visibility="gone"
+        />
+</RelativeLayout>

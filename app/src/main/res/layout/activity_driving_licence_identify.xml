@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/comm_white_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_driving_license"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/DIP_15"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:placeholderImage="@drawable/xiangji"
+            fresco:placeholderImageScaleType="fitCenter"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/DIP_15"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/DIP_15"
+                >
+
+                <TextView
+                    android:id="@+id/tv_identification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_driving_license"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/DIP_25"
+                    android:text="@string/identified_info"
+                    android:textColor="@color/common_text_gray_dark"
+                    android:textSize="@dimen/text_large_20sp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/common_gray_line"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scrollbars="none"
+                    >
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_60_L"
+        android:orientation="horizontal"
+        >
+
+        <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+            android:id="@+id/crb_identify"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/again_identify"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP_20_L"
+            fresco:unpressed_color="@color/common_orange_light"
+            />
+
+        <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+            android:id="@+id/crb_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/save_idenfication"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP_20_L"
+            fresco:unpressed_color="@color/common_theme_blue"
+            />
+
+    </LinearLayout>
+</LinearLayout>

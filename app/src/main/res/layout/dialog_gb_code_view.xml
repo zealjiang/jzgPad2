@@ -1,0 +1,85 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_tanchu"
+    android:padding="15dp"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/close"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/gb_code_confirm_hint"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        />
+
+    <com.jcpt.jzg.padsystem.widget.ClearableEditText
+        android:id="@+id/cetCarNamePlate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_70_L"
+        android:background="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:drawablePadding="4dp"
+        android:imeOptions="flagNoExtractUi"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        android:inputType="text"
+        android:maxLength="30"
+        /><!-- android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"-->
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+            android:id="@+id/crb_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="不一致修改"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_18sp"
+            android:gravity="center"
+            android:background="@null"
+            zhy:unpressed_color="@color/common_orange_light"
+            zhy:ripple_color="@color/common_orange_dark"
+            />
+
+        <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+            android:id="@+id/crb_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="一致并继续"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_18sp"
+            android:gravity="center"
+            android:background="@null"
+            zhy:unpressed_color="@color/common_btn_blue"
+            zhy:ripple_color="@color/common_blue_dark"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

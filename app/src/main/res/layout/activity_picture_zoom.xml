@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_picture_zoom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.jcpt.jzg.padsystem.ui.activity.PictureZoomActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="13dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="图片浏览"/>
+        <TextView
+            android:id="@+id/tvRecapture"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="重拍"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/tvDel"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="删除"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/tvRecapture"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+    <com.jcpt.jzg.padsystem.widget.MyPhotoView
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTitle"
+        >
+    </com.jcpt.jzg.padsystem.widget.MyPhotoView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black_overlay"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:id="@+id/ivRotate"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="13dp"
+            android:src="@drawable/contrarotate_selector"/>
+
+
+        <Button
+            android:id="@+id/tvRestore"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="还原"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/tvSave"
+            android:textColor="@drawable/text_color_enable"
+            android:background="@null"
+            />
+        <Button
+            android:id="@+id/tvSave"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="保存"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:textColor="@drawable/text_color_enable"
+            android:background="@null"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

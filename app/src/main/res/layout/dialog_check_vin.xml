@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_white_bg">
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/SP_24_L"
+        android:textColor="@color/black_font"
+        android:text=""/>
+    <TextView
+        android:id="@+id/tvIknow"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DIP_45"
+        android:layout_weight="1"
+        android:background="@drawable/btn_blue_bg1"
+        android:gravity="center"
+        android:text="知道了"
+        android:textColor="@color/white"
+        android:textSize="@dimen/SP_15_L"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/DIP_40"
+        android:paddingRight="@dimen/DIP_40"
+        android:layout_marginBottom="@dimen/DIP_20"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

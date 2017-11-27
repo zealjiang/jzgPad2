@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/DIP_10">
+
+    <RelativeLayout
+        android:layout_width="@dimen/DIP_160"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_subjoin"
+            style="@style/simpledraweeview_subjion"
+            android:layout_width="@dimen/DIP_160"
+            android:layout_height="@dimen/DIP_130"
+            />
+       <!-- android:padding="@dimen/DIP_10"-->
+
+        <ImageView
+            android:id="@+id/img_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/del_car_pic"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/DIP_160"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="左前划痕"
+        android:textColor="@color/common_text_gray_dark"
+        android:textSize="@dimen/text_medium_14sp"/>
+</LinearLayout>

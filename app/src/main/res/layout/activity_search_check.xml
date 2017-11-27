@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:zhy="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_blue_dark"
+    android:padding="@dimen/DIP_5"
+    android:gravity="center_vertical"
+
+    >
+
+
+
+    <com.jcpt.jzg.padsystem.widget.ClearableEditText
+        android:id="@+id/etCheck"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/DIP_45"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/DIP_10"
+        android:paddingRight="@dimen/DIP_10"
+        android:gravity="center_vertical"
+        android:background="@android:color/white"
+        android:drawablePadding="4dp"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:singleLine="true"
+        android:hint="请输入检测项名称"
+        android:textColor="@color/black"
+        android:textColorHint="@color/common_text_gray_dark"
+        android:inputType="text"
+        android:maxLength="20"
+
+    />
+
+    <TextView
+        android:id="@+id/tvCancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/SP_16_L"
+        android:padding="@dimen/DIP_15"
+        android:textColor="@color/white"
+        android:text="取消"/>
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/DIP_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门搜索："/>
+
+        <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+            android:id="@+id/hotSearchTfl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            zhy:max_select="1"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollViewDetection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+        <!--android:textColor="@color/common_blue_dark"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/DIP_15">
+
+
+                <TextView
+                    android:id="@+id/tv_important"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重点"
+                    android:paddingBottom="@dimen/DIP_4"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:visibility="gone"
+                android:background="@color/global_gray_2"/>
+
+            <TextView
+                android:id="@+id/tvIm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/DIP_10"
+                android:visibility="gone"
+                android:text="搜索无结果！"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvOptions"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/DIP_10"
+                android:layout_weight="1" />
+
+
+
+            <TextView
+                android:id="@+id/tv_un_important"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIP_10"
+                android:text="非重点"
+                android:paddingBottom="@dimen/DIP_4"
+                android:paddingTop="@dimen/DIP_4"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:visibility="gone"
+                android:background="@color/global_gray_2"/>
+            <TextView
+                android:id="@+id/tvUnIm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/DIP_10"
+                android:visibility="gone"
+                android:text="搜索无结果！"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/UnimportantRvOptions"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/DIP_10"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

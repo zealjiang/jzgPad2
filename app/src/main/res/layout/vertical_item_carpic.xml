@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sdvCompare"
+        android:layout_width="@dimen/DIP_170_L"
+        android:layout_height="@dimen/DIP_200_L"
+        fresco:actualImageScaleType="fitCenter"
+        android:layout_marginLeft="@dimen/DIP_1"
+        android:scaleType="fitCenter"/>

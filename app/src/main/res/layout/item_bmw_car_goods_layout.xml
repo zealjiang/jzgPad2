@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/global_gray_1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/DIP_8">
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black_font"
+                android:textSize="@dimen/text_medium_14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_line_middle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.4"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/DIP_8">
+
+            <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                android:id="@+id/tfl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                app:max_select="1"/>
+            <RadioGroup
+                android:id="@+id/rg_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rbtn_standardFront"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="达标"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/DIP_6"
+                    android:paddingTop="@dimen/DIP_6"
+                    android:layout_marginRight="@dimen/DIP_8"
+                    android:background="@drawable/rb_bg_selector"
+                    android:textColor="@color/rb_color_selector"
+                    android:textSize="@dimen/text_medium_14sp"/>
+                <RadioButton
+                    android:id="@+id/rbtn_standardBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不达标"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:paddingBottom="@dimen/DIP_6"
+                    android:paddingTop="@dimen/DIP_6"
+                    android:gravity="center"
+                    android:background="@drawable/rb_bg_selector"
+                    android:textColor="@color/rb_color_selector"
+                    android:textSize="@dimen/text_medium_14sp"/>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line_middle" />
+
+</LinearLayout>

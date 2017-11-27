@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/ll_control"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/cameraPreview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rv"
+                android:layout_marginTop="@dimen/DIP_50"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_frame"
+                android:visibility="gone"
+                />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_90_L"
+                android:layout_alignParentBottom="true"
+                android:background="#33000000"
+                android:scrollbars="none"/>
+
+
+            <View
+                android:id="@+id/focus_index"
+                android:layout_width="@dimen/DIP_120_L"
+                android:layout_height="@dimen/DIP_120_L"
+                android:layout_above="@+id/rv"
+                android:background="@drawable/cam_focus"
+                android:visibility="invisible"
+                />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="@dimen/DIP_140"
+                android:layout_height="@dimen/DIP_40"
+                android:layout_alignLeft="@+id/focus_index"
+                android:layout_alignRight="@+id/focus_index"
+                android:layout_below="@+id/focus_index"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:maxHeight="@dimen/DIP_40"
+                android:minHeight="@dimen/DIP_40"
+                android:visibility="invisible"
+
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_50"
+        android:layout_toLeftOf="@+id/ll_control"
+        android:background="#88000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/DIP_15"
+            android:paddingRight="@dimen/DIP_15"
+            android:src="@mipmap/ic_back"/>
+
+        <TextView
+            android:id="@+id/tv_photo_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/DIP_10"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="@dimen/SP_18_L"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_control"
+        android:layout_width="@dimen/DIP_80_L"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_flash"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_60_L"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/button_flash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btn_camera_flash_off"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_camera"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_60_L"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/button_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/btn_camera_turn_n"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAlbum"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_60_L"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:text="相册"
+                android:textColor="#ffffff"/>
+
+            <Button
+                android:id="@+id/btnHDR"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_60_L"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:text="HDR"
+                android:textColor="#ffffff"
+                android:visibility="gone"
+                />
+
+            <Button
+                android:id="@+id/btnWhiteBalance"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_60_L"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:text="白平衡"
+                android:textColor="#ffffff"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/button_capture"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_50"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/DIP_10"
+                android:layout_marginBottom="@dimen/DIP_10"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_shutter"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIP_60_L"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:text="取消"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBigPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone">
+
+
+        <me.relex.photodraweeview.PhotoDraweeView
+            android:id="@+id/photoDraweeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:failureImageScaleType="centerInside"
+            app:placeholderImageScaleType="fitCenter"
+            app:progressBarAutoRotateInterval="1000"
+            app:progressBarImageScaleType="centerInside"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_72_L"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/ivRecap"
+                android:layout_width="@dimen/DIP_48"
+                android:layout_height="@dimen/DIP_48"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/DIP_12"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_recapture"
+                />
+
+            <ImageView
+                android:id="@+id/ivOK"
+                android:layout_width="@dimen/DIP_48"
+                android:layout_height="@dimen/DIP_48"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/DIP_12"
+                android:src="@mipmap/ic_ok"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

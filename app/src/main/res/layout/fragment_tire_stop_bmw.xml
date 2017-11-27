@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/btn_next_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_gray_dark_middle"
+                android:padding="@dimen/DIP_8"
+                android:text="轮胎轮毂"
+                android:textColor="@color/black_font"
+                android:textSize="@dimen/text_medium_14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/DIP_8"
+                    android:text="左前轮胎品牌/年份/型号"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/text_medium_14sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line_middle" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.4"
+                    android:padding="@dimen/DIP_8">
+
+                    <TextView
+                        android:id="@+id/tvLeftFront"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <TextView
+                        android:id="@+id/btnLeftFront"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="选择品牌年份型号"
+                        android:background="@drawable/bg_gray_stroke"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_line_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/DIP_8"
+                    android:text="右前轮胎品牌/年份/型号"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/text_medium_14sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line_middle" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.4"
+                    android:padding="@dimen/DIP_8">
+
+                    <TextView
+                        android:id="@+id/tvRightFront"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <TextView
+                        android:id="@+id/btnRightFront"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_gray_stroke"
+                        android:textColor="@color/black_font"
+                        android:text="选择品牌年份型号"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_line_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/DIP_8"
+                    android:text="左后轮胎品牌/年份/型号"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/text_medium_14sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line_middle" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.4"
+                    android:padding="@dimen/DIP_8">
+
+                    <TextView
+                        android:id="@+id/tvLeftBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <TextView
+                        android:id="@+id/btnLeftBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_gray_stroke"
+                        android:textColor="@color/black_font"
+                        android:text="选择品牌年份型号"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_line_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/DIP_8"
+                    android:text="右后轮胎品牌/型号/年份"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/text_medium_14sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line_middle" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.4"
+                    android:padding="@dimen/DIP_8">
+
+                    <TextView
+                        android:id="@+id/tvRightBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <TextView
+                        android:id="@+id/btnRightBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_gray_stroke"
+                        android:textColor="@color/black_font"
+                        android:text="选择品牌年份型号"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_line_middle" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/DIP_8"
+                    android:text="胎纹深度 单位：mm"
+                    android:textColor="@color/black_font"
+                    android:textSize="@dimen/text_medium_14sp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_line_middle" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.4"
+                    android:orientation="vertical"
+                    android:padding="@dimen/DIP_8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/DIP_10"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="左前："
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/text_medium_14sp" />
+
+                            <EditText
+                                android:id="@+id/etLeftFront"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:imeOptions="actionNext|flagNoExtractUi"
+                                android:inputType="number"
+                                android:textSize="@dimen/text_medium_14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="右前："
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/text_medium_14sp" />
+
+                            <EditText
+                                android:id="@+id/etRightFront"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:imeOptions="actionNext|flagNoExtractUi"
+                                android:inputType="number"
+                                android:textSize="@dimen/text_medium_14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="左后："
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/text_medium_14sp" />
+
+                            <EditText
+                                android:id="@+id/etLeftBack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:imeOptions="actionNext|flagNoExtractUi"
+                                android:inputType="number"
+                                android:textSize="@dimen/text_medium_14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="右后："
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/text_medium_14sp" />
+
+                            <EditText
+                                android:id="@+id/etRightBack"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:imeOptions="actionNext|flagNoExtractUi"
+                                android:inputType="number"
+                                android:textSize="@dimen/text_medium_14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvTire"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="备胎："
+                                android:textColor="@color/black_font"
+                                android:textSize="@dimen/text_medium_14sp" />
+
+                            <EditText
+                                android:id="@+id/etTire"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:imeOptions="actionDone|flagNoExtractUi"
+                                android:inputType="number"
+                                android:textSize="@dimen/text_medium_14sp" />
+                        </LinearLayout>
+
+                        <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                            android:id="@+id/tflNoTire"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            app:max_select="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_line_middle" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwTireStopItemView
+                android:id="@+id/tyreYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelTire="轮胎（包含备胎）不超过5年" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwTireStopItemView
+                android:id="@+id/tyreStandard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelTire="轮胎制造商及尺寸符合车辆要求" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwTireStopItemView
+                android:id="@+id/tyreTread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelTire="轮胎（包含备胎）胎纹深度最少3毫米" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwTireStopItemView
+                android:id="@+id/tyrePressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelTire="轮胎气压正常（并按照标准设定）" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwTireStopItemView
+                android:id="@+id/tyreDecorate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelTire="检查轮毂及轮饰处于与车龄相适应的良好状态" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwTireStopItemView
+                android:id="@+id/tyreSeason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelTire="轮胎季节"
+                app:rbtnStr1="夏胎"
+                app:rbtnStr2="冬胎" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwTireStopItemView
+                android:id="@+id/tyreOldAndNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelTire="轮胎新旧"
+                app:rbtnStr1="新"
+                app:rbtnStr2="旧" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+        android:id="@+id/tvNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_next_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_blue_bg"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large_18sp"
+        zhy:ripple_color="@color/common_blue_dark"
+        zhy:unpressed_color="@color/common_btn_blue" />
+
+</RelativeLayout>

@@ -1,0 +1,351 @@
+/*
+ * Copyright (C) 2014 pengjianbo(pengjianbosoft@gmail.com), Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+package com.jcpt.jzg.padsystem.utils;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Canvas;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Environment;
+import android.text.TextUtils;
+
+import com.facebook.common.util.UriUtil;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.backends.pipeline.PipelineDraweeController;
+import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder;
+import com.facebook.drawee.controller.BaseControllerListener;
+import com.facebook.drawee.drawable.ProgressBarDrawable;
+import com.facebook.drawee.generic.GenericDraweeHierarchy;
+import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
+import com.facebook.drawee.interfaces.DraweeController;
+import com.facebook.drawee.view.DraweeHolder;
+import com.facebook.drawee.view.SimpleDraweeView;
+import com.facebook.imagepipeline.common.ResizeOptions;
+import com.facebook.imagepipeline.core.ImagePipelineConfig;
+import com.facebook.imagepipeline.image.ImageInfo;
+import com.facebook.imagepipeline.request.ImageRequest;
+import com.facebook.imagepipeline.request.ImageRequestBuilder;
+import com.jcpt.jzg.padsystem.R;
+import com.jcpt.jzg.padsystem.app.PadSysApp;
+import com.jcpt.jzg.padsystem.global.Constants;
+
+import cn.finalteam.galleryfinal.widget.GFImageView;
+import me.relex.photodraweeview.PhotoDraweeView;
+
+/**
+ * Desction:fresco image loader
+ * Author:pengjianbo
+ * Date:15/12/24 下午9:34
+ */
+public class FrescoImageLoader implements cn.finalteam.galleryfinal.ImageLoader {
+
+    private Context context;
+
+    private ResizeOptions resizeOptions = new ResizeOptions(Constants.FRESCOL_COMPRESSION_COEFFICIENT, Constants.FRESCOL_COMPRESSION_COEFFICIENT);
+
+    private BaseControllerListener baseControllerListener = new BaseControllerListener<ImageInfo>();
+
+
+    private static volatile FrescoImageLoader singleton = null;
+
+
+    //-----------------------------
+
+/*    private final String IMAGE_PIPELINE_CACHE_DIR = "imagepipeline_cache";
+    private ImagePipelineConfig sImagePipelineConfig;
+    private static final int MAX_HEAP_SIZE = (int) Runtime.getRuntime().maxMemory();
+    public final int MAX_DISK_CACHE_SIZE = 300 * ByteConstants.MB;
+    public final int MAX_MEMORY_CACHE_SIZE = MAX_HEAP_SIZE / 3;
+    *//**
+     * Creates config using android http stack as network backend.
+     *//*
+    public ImagePipelineConfig getImagePipelineConfig(Context context) {
+        if (sImagePipelineConfig == null) {
+            ImagePipelineConfig.Builder configBuilder = ImagePipelineConfig.newBuilder(context);
+            configureCaches(configBuilder, context);
+            sImagePipelineConfig = configBuilder.build();
+        }
+        return sImagePipelineConfig;
+    }
+
+
+    *//**
+     * Configures disk and memory cache not to exceed common limits
+     *//*
+    private void configureCaches(ImagePipelineConfig.Builder configBuilder, Context context) {
+        final MemoryCacheParams bitmapCacheParams = new MemoryCacheParams(
+                MAX_MEMORY_CACHE_SIZE, // Max total size of elements in the cache
+                Integer.MAX_VALUE,                     // Max entries in the cache
+                MAX_MEMORY_CACHE_SIZE, // Max total size of elements in eviction queue
+                Integer.MAX_VALUE,                     // Max length of eviction queue
+                Integer.MAX_VALUE);                    // Max cache entry size
+        configBuilder.setBitmapMemoryCacheParamsSupplier(
+                        new Supplier<MemoryCacheParams>() {
+                            public MemoryCacheParams get() {
+                                return bitmapCacheParams;
+                            }
+                        })
+                .setMainDiskCacheConfig(DiskCacheConfig.newBuilder(context)
+                        .setBaseDirectoryPath(getExternalCacheDir(context))
+                        .setBaseDirectoryName(IMAGE_PIPELINE_CACHE_DIR)
+                        .setMaxCacheSize(MAX_DISK_CACHE_SIZE)
+                        .build());
+    }
+
+
+    public File getExternalCacheDir(final Context context) {
+        if (hasExternalCacheDir())
+            return context.getExternalCacheDir();
+
+        // Before Froyo we need to construct the external cache dir ourselves
+        final String cacheDir = "/cache/";//"/Android/data/" + context.getPackageName() + "/cache/";
+        return createFile(Constants.ROOT_DIR + cacheDir, "");
+    }
+
+    public boolean hasExternalCacheDir() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO;
+    }
+
+    public  File createFile(String folderPath, String fileName) {
+        File destDir = new File(folderPath);
+        if (!destDir.exists()) {
+            destDir.mkdirs();
+        }
+        return new File(folderPath, fileName);
+    }*/
+
+    //---------------------------------
+
+    private FrescoImageLoader() {
+    }
+
+    public static FrescoImageLoader getSingleton() {
+        if (singleton == null) {
+            synchronized (FrescoImageLoader.class) {
+                if (singleton == null) {
+                    singleton = new FrescoImageLoader();
+                }
+            }
+        }
+        return singleton;
+    }
+
+    /**
+     * Created by 李波 on 2016/12/2.
+     * 初始化配置Fresco，以便加载图片时加载缩略图不卡顿
+     */
+    public void frescoInit() {
+        ImagePipelineConfig imagePipelineConfig = ImagePipelineConfig.newBuilder(PadSysApp.getAppContext())
+                .setDownsampleEnabled(true)
+                .build();
+        //sImagePipelineConfig = getImagePipelineConfig(PadSysApp.getAppContext());
+        Fresco.initialize(PadSysApp.getAppContext(), imagePipelineConfig);
+    }
+
+
+    @Override
+    public void displayImage(Activity activity, String path, final GFImageView imageView, final Drawable defaultDrawable, int width, int height) {
+        Resources resources = context.getResources();
+        GenericDraweeHierarchy hierarchy = new GenericDraweeHierarchyBuilder(resources)
+                .setFadeDuration(300)
+                .setPlaceholderImage(defaultDrawable)
+                .setFailureImage(defaultDrawable)
+                .setProgressBarImage(new ProgressBarDrawable())
+                .build();
+
+        final DraweeHolder<GenericDraweeHierarchy> draweeHolder = DraweeHolder.create(hierarchy, context);
+        imageView.setOnImageViewListener(new GFImageView.OnImageViewListener() {
+            @Override
+            public void onDetach() {
+                draweeHolder.onDetach();
+            }
+
+            @Override
+            public void onAttach() {
+                draweeHolder.onAttach();
+            }
+
+            @Override
+            public boolean verifyDrawable(Drawable dr) {
+                if (dr == draweeHolder.getHierarchy().getTopLevelDrawable()) {
+                    return true;
+                }
+                return false;
+            }
+
+            @Override
+            public void onDraw(Canvas canvas) {
+                Drawable drawable = draweeHolder.getHierarchy().getTopLevelDrawable();
+                if (drawable == null) {
+                    imageView.setImageDrawable(defaultDrawable);
+                } else {
+                    imageView.setImageDrawable(drawable);
+                }
+            }
+        });
+        Uri uri = new Uri.Builder()
+                .scheme(UriUtil.LOCAL_FILE_SCHEME)
+                .path(path)
+                .build();
+        ImageRequest imageRequest = ImageRequestBuilder
+                .newBuilderWithSource(uri)
+                .setAutoRotateEnabled(true)
+                .setResizeOptions(new ResizeOptions(width, height))//图片目标大小
+                .build();
+        DraweeController controller = Fresco.newDraweeControllerBuilder()
+                .setOldController(draweeHolder.getController())
+                .setImageRequest(imageRequest)
+                .build();
+        draweeHolder.setController(controller);
+    }
+
+    @Override
+    public void clearMemoryCache() {
+
+    }
+
+    //------------当前使用以下加载图片保证加载的是缩略图不卡顿----------------------------------------------------  -> 李波 on 2016/12/2.
+
+    /**
+     * Created by 李波 on 2016/12/2.
+     * Fresco 加载图片，保证加载的是缩略图，避免引起卡顿现象
+     * Constants.FRESCOL_COMPRESSION_COEFFICIENT ----- 图片生成缩略图时的压缩系数
+     * path : 图片地址，无需拼接如：file：// 等前缀，直接传地址
+     */
+    public void displayImage(SimpleDraweeView draweeView, String path) {
+        Uri uri = Uri.parse("");   //初始化为空，如果地址为空，或地址错误就让其加载失败，刷新显示失败图片。
+        if (draweeView == null)
+            return;
+
+        if (path != null && path.startsWith("http")) {
+            uri = Uri.parse(path);
+        } else if (path != null && path.startsWith(Environment.getExternalStorageDirectory() + "")) {
+            uri = Uri.parse("file://" + path);
+        }
+
+
+        if (TextUtils.isEmpty(path)) {
+            loadResPic(draweeView, R.drawable.xiangji);
+        } else {
+            if(!path.startsWith("http")) {
+                Fresco.getImagePipeline().evictFromCache(uri);
+            }
+            ImageRequest request = ImageRequestBuilder.newBuilderWithSource(uri)
+                    .setResizeOptions(resizeOptions)
+                    .setAutoRotateEnabled(true)
+                    .setLocalThumbnailPreviewsEnabled(true)
+                    .build();
+            DraweeController controller = Fresco.newDraweeControllerBuilder()
+                    .setImageRequest(request)
+                    .setOldController(draweeView.getController())
+                    .setControllerListener(baseControllerListener)
+                    .build();
+            draweeView.setController(controller);
+        }
+    }
+
+    /**
+     * 加载本地图片（drawable图片）
+     *
+     * @param simpleDraweeView
+     * @param id
+     */
+    public void loadResPic(SimpleDraweeView simpleDraweeView, int id) {
+        Uri uri = Uri.parse("res://" +
+                PadSysApp.getAppContext().getPackageName() +
+                "/" + id);
+        simpleDraweeView.setImageURI(uri);
+    }
+
+    //----------------------------------------------------------------  -> 李波 on 2016/12/2.
+
+    /**
+     * Created by 郑有权 on 2017/5/2.
+     * Fresco 加载图片，保证加载的是缩略图，避免引起卡顿现象
+     * Constants.FRESCOL_COMPRESSION_COEFFICIENT ----- 图片生成缩略图时的压缩系数
+     * path : 图片地址，无需拼接如：file：// 等前缀，直接传地址
+     */
+    public void displayImageCache(Context context, SimpleDraweeView draweeView, String path) {
+        Uri uri = Uri.parse("");   //初始化为空，如果地址为空，或地址错误就让其加载失败，刷新显示失败图片。
+        if (draweeView == null)
+            return;
+
+        if (path != null && path.startsWith("http")) {
+            uri = Uri.parse(path);
+        } else if (path != null && path.startsWith(Environment.getExternalStorageDirectory() + "")) {
+            uri = Uri.parse("file://" + path);
+        }
+
+
+        if (TextUtils.isEmpty(path)) {
+            loadResPic(draweeView, R.drawable.xiangji);
+        } else {
+            ImageRequest request = ImageRequestBuilder
+                    .newBuilderWithSource(uri)
+                    .setResizeOptions(resizeOptions)
+                    .setProgressiveRenderingEnabled(true)
+                    .build();
+            PipelineDraweeController controller = (PipelineDraweeController) Fresco.newDraweeControllerBuilder()
+                    .setImageRequest(request)
+                    .setOldController(draweeView.getController())
+                    .build();
+
+            draweeView.setController(controller);
+        }
+    }
+    //----------------------------------------------------------------  -> 郑有权 on 2017/5/2..
+
+
+    public void displayImageBig(final PhotoDraweeView draweeView, String path) {
+        Uri uri = Uri.parse("");   //初始化为空，如果地址为空，或地址错误就让其加载失败，刷新显示失败图片。
+        if (draweeView == null)
+            return;
+
+        if (path != null && path.startsWith("http")) {
+            uri = Uri.parse(path);
+        } else if (path != null && path.startsWith(Environment.getExternalStorageDirectory() + "")) {
+            uri = Uri.parse("file://" + path);
+        }
+
+
+        if (TextUtils.isEmpty(path)) {
+            loadResPic(draweeView, R.drawable.xiangji);
+        } else {
+
+
+            PipelineDraweeControllerBuilder controller = Fresco.newDraweeControllerBuilder();
+            controller.setUri(uri);
+            controller.setOldController(draweeView.getController());
+            controller.setControllerListener(new BaseControllerListener<ImageInfo>() {
+                @Override
+                public void onFinalImageSet(String id, ImageInfo imageInfo, Animatable animatable) {
+                    super.onFinalImageSet(id, imageInfo, animatable);
+                    if (imageInfo == null || draweeView == null) {
+                        return;
+                    }
+                    draweeView.update(imageInfo.getWidth(), imageInfo.getHeight());
+                }
+            });
+            draweeView.setController(controller.build());
+
+        }
+
+    }
+}

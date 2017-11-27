@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_50"
+        android:background="@color/global_gray_1"
+        >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/DIP_50"
+            android:layout_height="@dimen/DIP_50"
+            android:padding="@dimen/DIP_13"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/global_blue"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/SP_20_L"
+            android:text="绘制外观示意图"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFF">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/car_img"/>
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DIP_50"
+        android:layout_marginLeft="@dimen/DIP_5"
+        android:layout_marginRight="@dimen/DIP_5"
+        >
+
+        <Button
+            android:id="@+id/btHollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D=凹陷"
+            android:textColor="@color/global_white"
+            android:background="@drawable/selector_green_to_blue"
+            />
+        <Button
+            android:id="@+id/btScratch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="S=划痕"
+            android:textColor="@color/global_white"
+            android:background="@drawable/selector_green_to_blue"
+            />
+        <Button
+            android:id="@+id/btLose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="M=丢失"
+            android:textColor="@color/global_white"
+            android:background="@drawable/selector_green_to_blue"
+            />
+        <Button
+            android:id="@+id/btExhausted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="W=耗尽"
+            android:textColor="@color/global_white"
+            android:background="@drawable/selector_green_to_blue"
+            />
+        <Button
+            android:id="@+id/btDamage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="B=损坏"
+            android:textColor="@color/global_white"
+            android:background="@drawable/selector_green_to_blue"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/global_white"
+            android:background="@drawable/selector_blue_to_green"
+            android:text="保存"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

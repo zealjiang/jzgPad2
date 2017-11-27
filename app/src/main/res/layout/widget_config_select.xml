@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIP_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_padding_left"
+                    android:text="铭牌车辆型号"
+                    android:textColor="@color/common_theme_blue"
+                    android:textSize="@dimen/text_large_18sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"/>
+
+                <com.jcpt.jzg.padsystem.widget.ClearableEditText
+                    android:id="@+id/cetCarNamePlate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIP_50"
+                    android:background="@drawable/side_corner_black_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/DIP_10"
+                    android:paddingLeft="@dimen/DIP_10"
+                    android:paddingRight="@dimen/DIP_10"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="@dimen/DIP_4"
+                    android:imeOptions="flagNoExtractUi"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:maxLength="30"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIP_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_padding_left"
+                    android:text="变速箱"
+                    android:textColor="@color/common_theme_blue"
+                    android:textSize="@dimen/text_large_18sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/tagflow_gear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/DIP_10"
+                    zhy:max_select="1">
+                </com.zhy.view.flowlayout.TagFlowLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIP_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_padding_left"
+                    android:text="驱动方式"
+                    android:textColor="@color/common_theme_blue"
+                    android:textSize="@dimen/text_large_18sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/tagflow_driving_mode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/DIP_10"
+                    zhy:max_select="1">
+                </com.zhy.view.flowlayout.TagFlowLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIP_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_padding_left"
+                    android:text="排气量"
+                    android:textColor="@color/common_theme_blue"
+                    android:textSize="@dimen/text_large_18sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"/>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/tagflow_displacement"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/DIP_10"
+                    zhy:max_select="1">
+                </com.zhy.view.flowlayout.TagFlowLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DIP_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_padding_left"
+                    android:text="出厂日期"
+                    android:textColor="@color/common_theme_blue"
+                    android:textSize="@dimen/text_large_18sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@color/common_gray_line"
+                    android:visibility="gone"/>
+
+                <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+                    android:id="@+id/crb_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_10"
+                    android:layout_marginLeft="@dimen/text_padding_left"
+                    android:layout_marginRight="@dimen/text_padding_left"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/SP_20_L"
+                    zhy:ripple_color="@color/common_blue_dark"
+                    zhy:round_radius="3dp"
+                    zhy:unpressed_color="@color/common_btn_blue"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/viewFragReload"
+        layout="@layout/view_frag_reload"
+        android:visibility="gone"/>
+</RelativeLayout>

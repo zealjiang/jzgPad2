@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/DIP_145_L"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="@dimen/DIP_170_L"
+        android:layout_height="@dimen/DIP_145_L"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/DIP_100_L"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jcpt.jzg.padsystem.widget.AutoFitTextView
+                android:id="@+id/tv_chexing"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:paddingLeft="@dimen/DIP_10"
+                android:paddingRight="@dimen/DIP_10"
+                android:textSize="@dimen/SP_14_L"
+                android:text="" />
+
+            <com.jcpt.jzg.padsystem.widget.AutoFitTextView
+                android:id="@+id/tv_zhidaojia"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/DIP_1"
+                android:layout_marginBottom="@dimen/DIP_2"
+                android:layout_gravity="center"
+                android:textColor="@color/red"
+                android:textSize="@dimen/SP_14_L"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/common_text_gray_dark"
+                android:gravity="center"
+                android:textSize="@dimen/SP_10_L"
+                android:textColor="@color/white"
+                android:text="关闭" />
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/common_theme_blue"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/SP_10_L"
+                android:text="确认" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/DIP_1"
+        android:layout_height="match_parent"
+        android:background="@color/common_gray_line"></View>
+</LinearLayout>

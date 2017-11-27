@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlDetectItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/DIP_50"
+    android:background="@drawable/bg_gray_strok">
+
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="@dimen/DIP_50"
+        android:layout_height="@dimen/DIP_50"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_search_gray" />
+
+    <View
+        android:id="@+id/leftView"
+        android:layout_width="@dimen/DIP_1"
+        android:layout_height="@dimen/DIP_50"
+        android:layout_toRightOf="@id/ivLeft"
+        android:background="@color/common_gray_line" />
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_50"
+        android:layout_toRightOf="@+id/leftView"
+        android:layout_toLeftOf="@+id/rightView"
+        android:gravity="center"
+        android:text="左前翼子板"
+        android:textSize="@dimen/text_medium_16sp" />
+
+    <View
+        android:id="@+id/rightView"
+        android:layout_width="@dimen/DIP_1"
+        android:layout_height="@dimen/DIP_50"
+        android:layout_toLeftOf="@id/ivRight"
+        android:background="@color/common_gray_line" />
+
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="@dimen/DIP_50"
+        android:layout_height="@dimen/DIP_50"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_check_normal" />
+
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIP_15"
+        android:layout_gravity="center_horizontal"
+        android:text="请选择缺陷归属项"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <RadioButton
+            android:id="@+id/rbTyre"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_50"
+            android:layout_marginTop="@dimen/DIP_20"
+            android:layout_marginLeft="@dimen/DIP_15"
+            android:layout_marginRight="@dimen/DIP_15"
+            android:background="@drawable/selector_menu_spot"
+            android:gravity="center"
+            android:text="@string/part1"
+            android:textSize="@dimen/SP_16_L"
+            android:textColor="#FFF"
+            android:button="@null"
+            />
+        <RadioButton
+            android:id="@+id/rbLamp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_50"
+            android:layout_marginTop="@dimen/DIP_15"
+            android:layout_marginLeft="@dimen/DIP_15"
+            android:layout_marginRight="@dimen/DIP_15"
+            android:background="@drawable/selector_menu_spot"
+            android:gravity="center"
+            android:text="@string/part2"
+            android:textSize="@dimen/SP_16_L"
+            android:textColor="#FFF"
+            android:button="@null"
+            />
+         <RadioButton
+            android:id="@+id/rbGlass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_50"
+            android:layout_marginTop="@dimen/DIP_15"
+            android:layout_marginLeft="@dimen/DIP_15"
+            android:layout_marginRight="@dimen/DIP_15"
+            android:background="@drawable/selector_menu_spot"
+            android:gravity="center"
+            android:text="@string/part3"
+            android:textSize="@dimen/SP_16_L"
+            android:textColor="#FFF"
+            android:button="@null"
+		/>
+
+        <RadioButton
+            android:id="@+id/rbOhter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_50"
+            android:layout_marginTop="@dimen/DIP_15"
+            android:layout_marginLeft="@dimen/DIP_15"
+            android:layout_marginRight="@dimen/DIP_15"
+            android:background="@drawable/selector_menu_spot"
+            android:gravity="center"
+            android:text="@string/part4"
+            android:textSize="@dimen/SP_16_L"
+            android:textColor="#FFF"
+            android:button="@null"
+            />
+        <RadioButton
+            android:id="@+id/rbCancle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_50"
+            android:layout_margin="@dimen/DIP_15"
+            android:background="@color/global_red"
+            android:gravity="center"
+            android:text="放弃"
+            android:textSize="@dimen/SP_16_L"
+            android:textColor="#FFF"
+            android:button="@null"
+            />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/lldel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_50"
+        android:layout_margin="@dimen/DIP_15"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btDel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/global_red"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/SP_16_L"
+            android:textColor="#FFF"
+            android:text="删除此标记点"/>
+        <Button
+            android:id="@+id/btCancle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/DIP_10"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_menu_spot"
+            android:textSize="@dimen/SP_16_L"
+            android:textColor="#FFF"
+            android:text="取消"/>
+
+    </LinearLayout>
+
+</LinearLayout>

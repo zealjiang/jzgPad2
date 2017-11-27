@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_click"
+                android:paddingBottom="@dimen/DIP_5">
+
+    <TextView
+        android:id="@+id/alpha"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/DIP_25"
+        android:background="@color/common_bg_gray"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/DIP_13"
+        android:textColor="@color/common_text_gray_dark"
+        android:visibility="gone" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/car_image"
+        android:layout_width="@dimen/DIP_60_L"
+        android:layout_height="@dimen/DIP_60_L"
+        android:layout_below="@id/alpha"
+        android:paddingLeft="@dimen/DIP_5"
+        android:paddingTop="@dimen/DIP_5" />
+
+    <TextView
+        android:id="@+id/car_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/car_image"
+        android:layout_marginBottom="@dimen/DIP_15"
+        android:layout_marginLeft="@dimen/DIP_20"
+        android:layout_toRightOf="@+id/car_image"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/SP_16_L" />
+
+</RelativeLayout>

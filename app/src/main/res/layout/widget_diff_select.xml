@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_50"
+        android:background="@color/common_bg_gray"
+        android:gravity="center"
+        android:text="差异配置"
+        android:textColor="@color/common_blue_dark"
+        android:textSize="@dimen/text_medium_16sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/common_gray_line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/tagflow_diff_config"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/DIP_10"
+            zhy:max_select="-1"/>
+    </ScrollView>
+</LinearLayout>

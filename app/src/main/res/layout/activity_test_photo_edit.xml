@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jcpt.jzg.padsystem.test.TestPhotoEditActivity">
+
+    <LinearLayout
+        android:id="@+id/llMenu"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/common_text_gray_dark"
+        android:orientation="vertical"
+        android:paddingTop="50dp">
+
+        <TextView
+            android:id="@+id/tvCrop"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_medium_16sp"
+            android:text="剪裁"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvMarsic"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="@dimen/text_medium_16sp"
+            android:gravity="center"
+            android:text="马赛克"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvDel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="@dimen/text_medium_16sp"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvArrow"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_medium_16sp"
+            android:text="箭头"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvCircle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_medium_16sp"
+            android:text="圈圈"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvCamera"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="@dimen/text_medium_16sp"
+            android:gravity="center"
+            android:text="重拍"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvOK"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/common_orange_light"
+            android:gravity="center"
+            android:textSize="@dimen/text_medium_16sp"
+            android:text="完成"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/llMenu"
+        android:background="@android:color/black">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivShow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            custom:actualImageScaleType="centerInside" />
+        <com.jcpt.jzg.padsystem.image.view.crop.CropImageView
+            android:id="@+id/ivCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            custom:imageResource="@null" />
+
+        <com.jcpt.jzg.padsystem.image.view.mosaic.DrawMosaicView
+            android:id="@+id/ivMarsic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+        <com.jcpt.jzg.padsystem.image.view.operate.StickerView
+            android:id="@+id/sticker_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="visible"/>
+        <LinearLayout
+            android:id="@+id/llStickerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <TextView
+        android:id="@+id/tvMyTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_my_tasku"
+        android:text="我的任务"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:drawablePadding="6dp"
+        android:padding="30dp"/>
+    <TextView
+        android:id="@+id/tvModifyPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_modify_pwd"
+        android:text="修改密码"
+        android:enabled="true"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:drawablePadding="6dp"
+        android:padding="30dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tvExport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_gf_rotate"
+        android:text="运行日志"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:drawablePadding="6dp"
+        android:padding="30dp"
+        />
+    <TextView
+        android:id="@+id/tvExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_exit"
+        android:text="退出系统"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:drawablePadding="6dp"
+        android:padding="30dp"/>
+
+
+    <TextView
+        android:id="@+id/tvTest"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_dialog_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_dialog_hint_view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/DIP_10"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/common_text_gray_dark"
+            android:textSize="@dimen/text_medium_16sp" />
+
+        <TextView
+            android:id="@+id/tv_dialog_hint_view_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/DIP_20"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/common_text_gray_dark"
+            android:textSize="@dimen/text_medium_16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_1"
+            android:background="@color/common_bg_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_dialog_hint_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/DIP_10"
+                android:text="取消"
+                android:textColor="@color/common_btn_blue"
+                android:textSize="@dimen/text_medium_16sp" />
+
+            <View
+                android:layout_width="@dimen/DIP_1"
+                android:layout_height="match_parent"
+                android:background="@color/common_bg_gray" />
+
+            <Button
+                android:id="@+id/btn_dialog_hint_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/DIP_10"
+                android:text="确定"
+                android:textColor="@color/common_btn_blue"
+                android:textSize="@dimen/text_medium_16sp" />
+        </LinearLayout>
+
+</LinearLayout>

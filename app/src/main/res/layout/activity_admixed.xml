@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2f7dc8">
+
+        <TextView
+            android:id="@+id/title_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="车辆参配"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_20sp" />
+
+        <ImageView
+            android:id="@+id/title_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:onClick="goBack"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_gf_back" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_line_middle" />
+
+        <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+            android:id="@+id/tv_zhaopianbidui"
+            android:layout_width="@dimen/DIP_90_L"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="@dimen/DIP_8"
+            android:layout_marginEnd="8dp"
+            android:text="@string/photo_compare"
+            android:textColor="@color/white"
+            android:textSize="@dimen/SP_16_L"
+            android:gravity="center"
+            zhy:unpressed_color="@color/common_btn_blue"
+            zhy:ripple_color="@color/common_blue_dark"
+            zhy:round_radius="10dp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_bg_gray"
+        android:minHeight="@dimen/DIP_40_L"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/DIP_170_L"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIP_100_L"
+                android:gravity="center"
+                android:text="车辆款型"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/tv_show_all"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:gravity="center"
+                android:text="隐藏相同配置"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+        <com.jcpt.jzg.padsystem.view.MySyncHorizontalScrollView
+            android:id="@+id/mytable_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/common_bg_gray"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/ll_hrz"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIP_145_L"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </com.jcpt.jzg.padsystem.view.MySyncHorizontalScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_1"
+        android:background="@color/common_bg_gray" />
+
+        <com.jcpt.jzg.padsystem.widget.ScrollBottomScrollView
+            android:id="@+id/scrollBottomScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            >
+
+            <!-- 左边listview -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/common_bg_gray">
+
+                <com.jcpt.jzg.padsystem.view.MyXRecyclerView
+                    android:id="@+id/contentListViewLeft"
+                    android:layout_width="@dimen/DIP_170_L"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:fadingEdge="none"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollbars="none"
+                    />
+                <!-- 右边 -->
+
+                <com.jcpt.jzg.padsystem.view.MySyncHorizontalScrollView
+                    android:id="@+id/rightContentHorscrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scrollbars="none">
+
+                    <com.jcpt.jzg.padsystem.view.MyXRecyclerView
+                        android:id="@+id/contentListViewRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:fadingEdge="none"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:scrollbars="none"
+                        />
+
+                </com.jcpt.jzg.padsystem.view.MySyncHorizontalScrollView>
+            </LinearLayout>
+        </com.jcpt.jzg.padsystem.widget.ScrollBottomScrollView>
+</LinearLayout>

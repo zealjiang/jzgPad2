@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomButton">
+        <attr name="pressed_color" format="color" />
+        <attr name="unpressed_color" format="color" />
+        <attr name="round_radius" format="dimension" />
+        <attr name="btn_radius" format="dimension" />
+        <attr name="ripple_color" format="color" />
+        <attr name="ripple_alpha" format="integer" />
+        <attr name="ripple_duration" format="integer" />
+        <attr name="shape_type" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="rectangle" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CustomImageButton">
+        <attr name="pressed_src" format="reference" />
+        <attr name="unpressed_src" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomTab">
+        <attr name="drawableTop" format="reference" />
+        <attr name="tabText" format="string|reference" />
+        <attr name="barTextColor" format="color|reference" />
+        <attr name="barTextSize" format="dimension|reference" />
+        <attr name="hintText" format="string|reference" />
+        <attr name="hintTextColor" format="color|reference" />
+        <attr name="hintTextSize" format="dimension|reference" />
+        <attr name="hintTextBackground" format="reference" />
+        <attr name="hintEnable" format="boolean" />
+        <attr name="verticalSpace" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="customTextView">
+        <attr name="textSolidColor" format="color" />
+        <attr name="textStrokeColor" format="color" />
+        <attr name="textRadius" format="dimension" />
+        <attr name="textLeftTopRadius" format="dimension" />
+        <attr name="textLeftBottomRadius" format="dimension" />
+        <attr name="textRightTopRadius" format="dimension" />
+        <attr name="textRightBottomRadius" format="dimension" />
+        <attr name="textStrokeWidth" format="dimension" />
+        <attr name="textDrawable" format="reference" />
+        <attr name="textNormalTextColor" format="color" />
+        <attr name="textSelectedTextColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="TagCloudLinkView">
+        <attr name="tagLayoutColor" format="color" />
+        <attr name="tagTextColor" format="color" />
+        <attr name="tagTextSize" format="dimension" />
+        <attr name="isDeletable" format="boolean" />
+        <attr name="deletableTextColor" format="color" />
+        <attr name="deletableTextSize" format="dimension" />
+    </declare-styleable>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CropImageView">
+        <attr name="guidelines">
+            <enum name="on" value="2"/>
+            <enum name="onTouch" value="1"/>
+            <enum name="off" value="0"/>
+        </attr>
+        <attr name="fixAspectRatio" format="boolean"/>
+        <attr name="aspectRatioX" format="integer"/>
+        <attr name="aspectRatioY" format= "integer"/>
+        <attr name="imageResource" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"></attr>
+        <attr name="max_select" format="integer"></attr>
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--宝马其他检查-->
+    <declare-styleable name="OtherCheckItemViewWidget">
+        <attr name="label" format="string" /><!--label文字-->
+        <attr name="labelColor" format="color" /><!--label显示颜色-->
+        <attr name="rbtnStrYes" format="string" /><!--右侧第一个按钮显示文字-->
+        <attr name="rbtnStrNo" format="string" /><!--右侧第二个按钮显示文字-->
+    </declare-styleable>
+
+    <!--宝马轮胎轮毂-->
+    <declare-styleable name="TireStopItemViewWidget">
+        <attr name="labelTire" format="string" /><!--label文字-->
+        <attr name="labelColorTire" format="color" /><!--label显示颜色-->
+        <attr name="rbtnStr1" format="string" /><!--右侧第一个按钮显示文字-->
+        <attr name="rbtnStr2" format="string" /><!--右侧第二个按钮显示文字-->
+    </declare-styleable>
+
+    <!--宝马随车附件-->
+    <declare-styleable name="CarGoodsItemViewWidget">
+        <attr name="labelCar" format="string" /><!--label文字-->
+        <attr name="labelColorCar" format="color" /><!--label显示颜色-->
+        <attr name="tagVal1" format="string" />
+        <attr name="tagVal2" format="string" />
+        <attr name="tagVal3" format="string" />
+        <attr name="tagVal4" format="string" />
+        <attr name="tagVal5" format="string" />
+        <attr name="tagVal6" format="string" />
+        <attr name="tagVal7" format="string" />
+        <attr name="tagVal8" format="string" />
+    </declare-styleable>
+
+    <!--滚轮-->
+    <declare-styleable name="pickerview">
+        <attr name="pickerview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr name="pickerview_textSize" format="dimension"/>
+        <attr name="pickerview_textColorOut" format="color"/>
+        <attr name="pickerview_textColorCenter" format="color"/>
+        <attr name="pickerview_dividerColor" format="color"/>
+        <attr name="pickerview_lineSpacingMultiplier" format="float"/>
+    </declare-styleable>
+</resources>

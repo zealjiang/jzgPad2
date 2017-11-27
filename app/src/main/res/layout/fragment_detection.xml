@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_bg_gray"
+    android:orientation="horizontal"
+    tools:context="com.jcpt.jzg.padsystem.ui.fragment.DetectionFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTaskType"
+        android:layout_width="@dimen/left_list_width"
+        android:layout_height="match_parent"
+        android:background="@color/menu_dark_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabIndicatorColor="@color/common_btn_blue"
+            app:tabSelectedTextColor="@color/common_btn_blue"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabMaxWidth="@dimen/DIP_300_L"
+            app:tabMinWidth="@dimen/DIP_300_L"
+            app:tabTextColor="@color/common_text_gray_dark"
+            android:visibility="gone"
+            />
+
+
+        <!--可滑动的布局内容-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+</LinearLayout>

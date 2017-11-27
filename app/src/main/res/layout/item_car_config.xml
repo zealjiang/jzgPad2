@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:background="@color/global_gray_0">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIP_10"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textColor="@color/common_btn_blue"
+                android:textSize="@dimen/SP_14_L"
+                />
+
+            <TextView
+                android:id="@+id/tvHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/DIP_2"
+                android:layout_marginBottom="@dimen/DIP_10"
+                android:text=""
+                android:textColor="@color/global_gray_3"
+                android:textSize="@dimen/SP_13_L"
+                />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="@dimen/dividerHeight"
+            android:layout_height="match_parent"
+            android:background="@color/common_gray_line" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="8"
+            android:layout_margin="@dimen/DIP_10"
+            android:orientation="horizontal">
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tfl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                >
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/common_gray_line" />
+</LinearLayout>

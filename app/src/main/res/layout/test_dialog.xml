@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/common_btn_blue">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VIN :WWWWWWWWWWWWWWWWW"
+        android:gravity="center"
+        android:padding="@dimen/DIP_10"
+        android:textColor="@color/common_theme_blue"
+        android:background="@color/cardview_light_background"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.任务中的VIN与实车不符"
+        android:gravity="center"
+        android:padding="@dimen/DIP_10"
+        android:layout_marginTop="@dimen/DIP_10"
+        android:textColor="@color/cardview_light_background"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/DIP_10"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/DIP_20"
+            android:layout_marginRight="@dimen/DIP_20"
+            android:layout_marginTop="@dimen/DIP_20"
+            android:text="取消"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/common_theme_blue"/>
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/DIP_10"
+            android:layout_marginLeft="@dimen/DIP_20"
+            android:layout_marginRight="@dimen/DIP_20"
+            android:layout_marginTop="@dimen/DIP_20"
+            android:gravity="center"
+            android:background="@drawable/btn_bg"
+            android:text="开始检测"
+            android:textColor="@color/common_theme_blue" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="horizontal"
+    tools:context="com.jcpt.jzg.padsystem.ui.fragment.MyTaskFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTaskType"
+        android:layout_width="@dimen/DIP_120_L"
+        android:layout_height="match_parent"
+        android:background="@color/menu_dark_blue">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_50"
+            android:layout_marginRight="@dimen/DIP_15"
+            android:layout_marginTop="@dimen/DIP_10"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <com.jcpt.jzg.padsystem.widget.ClearableEditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/DIP_45"
+                android:layout_marginLeft="@dimen/DIP_8"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:hint="搜索"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:maxLength="50"
+                android:minWidth="@dimen/DIP_200_L"
+                android:paddingLeft="@dimen/DIP_8"
+                android:paddingRight="@dimen/DIP_8"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/common_text_gray_dark"
+                android:textSize="@dimen/SP_13_L"
+                />
+
+            <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+                android:id="@+id/btnSearch"
+                style="@style/style_blue_round_corner_button"
+                android:layout_width="@dimen/DIP_80_L"
+                android:layout_height="@dimen/DIP_45"
+                android:layout_marginLeft="@dimen/DIP_6"
+                android:text="搜索"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_medium_14sp"
+                />
+        </LinearLayout>
+
+        <com.cjj.MaterialRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:isLoadMore="true"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvTaskList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </com.cjj.MaterialRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

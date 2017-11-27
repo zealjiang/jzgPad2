@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--车牌号码-->
+            <View
+                android:id="@+id/v_line_plate_id"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_plate_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="车牌号码"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/DIP_10">
+
+                    <TextView
+                        android:id="@+id/tv_region_simple_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/common_theme_blue"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/DIP_10"
+                        android:text="京"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_medium_14sp"/>
+
+                    <EditText
+                        android:id="@+id/et_car_plate_no"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/DIP_16"
+                        android:layout_marginRight="@dimen/DIP_16"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入车牌号码"
+                        android:imeOptions="actionNext|flagNoExtractUi"
+                        android:maxLength="7"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_medium_14sp"/>
+
+                    <CheckBox
+                        android:id="@+id/cbCarPlateId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rb_bg_selector"
+                        android:button="@null"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:gravity="center"
+                        android:text="车牌未见"
+                        android:textColor="@color/rb_color_selector"
+                        android:textSize="@dimen/text_medium_14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/v_line_vin"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <!--车架号VIN-->
+            <LinearLayout
+                android:id="@+id/ll_vin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:padding="@dimen/DIP_10"
+                        android:text="车架号VIN"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/et_vin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:digits="0123456789abcdefghjklmnprstuvwxyzABCDEFGHJKLMNPRSTUVWXYZ"
+                        android:gravity="center_vertical"
+                        android:hint="请输入车辆车架号VIN"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="17"
+                        android:paddingLeft="@dimen/DIP_10"
+                        android:singleLine="true"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp"
+                        android:longClickable="false"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_line_car_color"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+
+            <!--车身颜色-->
+            <LinearLayout
+                android:id="@+id/ll_car_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:padding="@dimen/DIP_10"
+                        android:text="车身颜色"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCarColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/global_gray_0"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionNext|flagNoExtractUi"
+                        android:inputType="text"
+                        android:maxLength="6"
+                        android:paddingLeft="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_14sp"
+                        android:text=""
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/v_line_driving"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <!--行驶证照片-->
+            <LinearLayout
+                android:id="@+id/ll_driving"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="行驶证照片"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:orientation="vertical"
+                    android:padding="@dimen/DIP_10">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/DIP_145_L"
+                                    android:layout_height="@dimen/DIP_115_L">
+
+                                    <com.facebook.drawee.view.SimpleDraweeView
+                                        android:id="@+id/iv_dri_lic_front"
+                                        style="@style/photo_procedure_thumbnail"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_identification"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/DIP_35_L"
+                                        android:layout_alignBottom="@+id/iv_dri_lic_front"
+                                        android:background="#aa287de5"
+                                        android:gravity="center"
+                                        android:text="@string/identification"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_medium_16sp"
+                                        android:visibility="gone"
+                                        />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tvDriLicFront"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="@dimen/DIP_10"
+                                    android:text="行驶证正本正面"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="@dimen/text_14sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/DIP_16"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <com.facebook.drawee.view.SimpleDraweeView
+                                    android:id="@+id/iv_dri_lic_back"
+                                    style="@style/photo_procedure_thumbnail"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvDriLicBack"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="@dimen/DIP_10"
+                                    android:text="行驶证正本背面"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="@dimen/text_14sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/DIP_16"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <com.facebook.drawee.view.SimpleDraweeView
+                                    android:id="@+id/iv_dri_lic_vice_front"
+                                    style="@style/photo_procedure_thumbnail"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvDriLicViceFront"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="@dimen/DIP_10"
+                                    android:text="行驶证副本正面"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="@dimen/text_14sp"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/DIP_16"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <com.facebook.drawee.view.SimpleDraweeView
+                                    android:id="@+id/iv_dri_lic_vice_back"
+                                    style="@style/photo_procedure_thumbnail"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvDriLicViceBack"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:paddingTop="@dimen/DIP_10"
+                                    android:text="行驶证副本背面"
+                                    android:textColor="@color/black_font"
+                                    android:textSize="@dimen/text_14sp"
+
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingTop="@dimen/DIP_10">
+
+                        <CheckBox
+                            android:id="@+id/cbDrivingLicNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="@dimen/DIP_10"
+                            android:background="@drawable/btn_bg_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="无行驶证"
+                            android:textColor="@drawable/btn_text_selector"
+                            android:textSize="@dimen/text_14sp"
+                            />
+
+                        <View
+                            android:layout_width="@dimen/DIP_16"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/cBoxXSZWJ"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_bg_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="行驶证未见"
+                            android:textColor="@drawable/btn_text_selector"
+                            android:textSize="@dimen/text_14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/view_line_register_date"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <!--登记日期-->
+            <LinearLayout
+                android:id="@+id/ll_register_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:id="@+id/tv_register_date_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:padding="@dimen/DIP_10"
+                        android:text="登记日期"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:padding="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_register_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择车辆首次登记日期"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium_14sp"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/cbRegisterDateNone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/rb_bg_selector"
+                        android:button="@null"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:gravity="center"
+                        android:text="登记日期未见"
+                        android:textColor="@color/rb_color_selector"
+                        android:textSize="@dimen/text_medium_14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--出厂日期-->
+            <View
+                android:id="@+id/view_line_factory_date"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <LinearLayout
+                android:id="@+id/ll_factory_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:id="@+id/tv_factory_date_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:padding="@dimen/DIP_10"
+                        android:text="出厂日期"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:padding="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_factory_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择车辆出厂日期"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium_14sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/v_line_engine_id"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <!--发动机号-->
+            <LinearLayout
+                android:id="@+id/ll_engine_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:id="@+id/tv_engine_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:padding="@dimen/DIP_10"
+                        android:text="发动机号"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_engine_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入车辆发动机号"
+                        android:imeOptions="actionNext|flagNoExtractUi"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="30"
+                        android:paddingLeft="@dimen/DIP_10"
+                        android:singleLine="true"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:textSize="@dimen/text_medium_14sp"/><!--android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" -->
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--钥匙-->
+            <View
+                android:id="@+id/v_line_key"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/llKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="钥匙"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/DIP_10">
+
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflKeyNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/white"
+                        zhy:max_select="1"/>
+
+                    <RadioGroup
+                        android:id="@+id/rgKey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="8"
+                        android:padding="0dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbKeyStdYes"
+                            style="@style/radioButton"
+                            android:text="达标"
+                            android:textColor="@color/rb_color_selector"
+                            android:textSize="@dimen/text_medium_14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbKeyStdNo"
+                            style="@style/radioButton"
+                            android:layout_marginLeft="@dimen/DIP_12"
+                            android:textColor="@color/rb_color_selector"
+                            android:text="不达标"
+                            android:textSize="@dimen/text_medium_14sp" />
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <!--车牌数量-->
+            <View
+                android:id="@+id/v_line_car_plate_num"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/llCarPlate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="车牌数量"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/DIP_10">
+
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflCarPlateNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/white"
+                        zhy:max_select="1"/>
+
+                    <RadioGroup
+                        android:id="@+id/rgCarPlateUpToStandard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="8"
+                        android:padding="0dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rbCarPlateNumStdYes"
+                            style="@style/radioButton"
+                            android:text="达标"
+                            android:textColor="@color/rb_color_selector"
+                            android:textSize="@dimen/text_medium_14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbCarPlateNumStdNo"
+                            style="@style/radioButton"
+                            android:layout_marginLeft="@dimen/DIP_12"
+                            android:textColor="@color/rb_color_selector"
+                            android:text="不达标"
+                            android:textSize="@dimen/text_medium_14sp" />
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <!--维保记录可查-->
+            <View
+                android:id="@+id/v_line_maint_record"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <LinearLayout
+                android:id="@+id/llMaintRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="维保记录可查"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <RadioGroup
+                    android:id="@+id/rgMaiRecord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:padding="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbMaiRecordYes"
+                        style="@style/radioButton"
+                        android:text="是"
+                        android:textColor="@color/rb_color_selector"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbMaiRecordNo"
+                        style="@style/radioButton"
+                        android:layout_marginLeft="@dimen/DIP_12"
+                        android:textColor="@color/rb_color_selector"
+                        android:text="否"
+                        android:textSize="@dimen/text_medium_14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--DMS无大事故记录-->
+            <View
+                android:id="@+id/v_line_dms_major_acci"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <LinearLayout
+                android:id="@+id/llDMSAcciRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="DMS无大事故记录"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <RadioGroup
+                    android:id="@+id/rgDMSAcciRecord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:padding="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbDMSAcciRecordYes"
+                        style="@style/radioButton"
+                        android:text="是"
+                        android:textColor="@color/rb_color_selector"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDMSAcciRecordNo"
+                        style="@style/radioButton"
+                        android:layout_marginLeft="@dimen/DIP_12"
+                        android:textColor="@color/rb_color_selector"
+                        android:text="否"
+                        android:textSize="@dimen/text_medium_14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--事故记录已维修-->
+            <View
+                android:id="@+id/v_line_acci_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <LinearLayout
+                android:id="@+id/llAcciMaintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="事故记录已维修"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAcciMaintain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:padding="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbAcciMaintainYes"
+                        style="@style/radioButton"
+                        android:text="是"
+                        android:textColor="@color/rb_color_selector"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbAcciMaintainNo"
+                        style="@style/radioButton"
+                        android:layout_marginLeft="@dimen/DIP_12"
+                        android:textColor="@color/rb_color_selector"
+                        android:text="否"
+                        android:textSize="@dimen/text_medium_14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--无未结算事故维修记录-->
+            <View
+                android:id="@+id/v_line_acci_no_pay"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <LinearLayout
+                android:id="@+id/llAcciNoPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="无未结算事故维修记录"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAcciNoPay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:padding="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbAcciNoPayYes"
+                        style="@style/radioButton"
+                        android:text="是"
+                        android:textColor="@color/rb_color_selector"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbAcciNoPayNo"
+                        style="@style/radioButton"
+                        android:layout_marginLeft="@dimen/DIP_12"
+                        android:textColor="@color/rb_color_selector"
+                        android:text="否"
+                        android:textSize="@dimen/text_medium_14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--技术召回-->
+            <View
+                android:id="@+id/v_line_technic_recall"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <LinearLayout
+                android:id="@+id/llTechnicRecall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="技术召回"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <RadioGroup
+                    android:id="@+id/rgTechnicRecall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:padding="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbTechnicRecallYes"
+                        style="@style/radioButton"
+                        android:text="是"
+                        android:textColor="@color/rb_color_selector"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbTechnicRecallNo"
+                        style="@style/radioButton"
+                        android:layout_marginLeft="@dimen/DIP_12"
+                        android:textColor="@color/rb_color_selector"
+                        android:text="否"
+                        android:textSize="@dimen/text_medium_14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--燃油表无报警-->
+            <View
+                android:id="@+id/v_line_oil_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+            <LinearLayout
+                android:id="@+id/llOilAlarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="燃油表无报警"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <RadioGroup
+                    android:id="@+id/rgOilAlarm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:padding="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbOilAlarmYes"
+                        style="@style/radioButton"
+                        android:text="是"
+                        android:textColor="@color/rb_color_selector"
+                        android:textSize="@dimen/text_medium_14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbOilAlarmNo"
+                        style="@style/radioButton"
+                        android:layout_marginLeft="@dimen/DIP_12"
+                        android:textColor="@color/rb_color_selector"
+                        android:text="否"
+                        android:textSize="@dimen/text_medium_14sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--里程表显示-->
+            <View
+                android:id="@+id/v_line_mileage"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/llMileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:id="@+id/tv_mileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="里程表显示"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/DIP_10">
+
+                    <EditText
+                        android:id="@+id/etMileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入里程表里程"
+                        android:imeOptions="actionNext|flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:paddingRight="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="公里"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--下次保养天数-->
+            <View
+                android:id="@+id/v_line_next_maintain_days"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_next_maintain_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="下次保养天数"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/DIP_10">
+
+                    <EditText
+                        android:id="@+id/et_next_maintain_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入距离下次保养天数"
+                        android:imeOptions="actionNext|flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingRight="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="天"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--下次保养距离-->
+            <View
+                android:id="@+id/v_line_next_maint_mileage"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_next_maint_mileage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="下次保养距离"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/DIP_10">
+
+                    <EditText
+                        android:id="@+id/et_next_maintain_mileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入距离下次保养距离"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:paddingRight="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:text="公里"
+                        android:textColor="@color/black_font"
+                        android:textSize="@dimen/text_medium_14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--有无此附件-->
+            <View
+                android:id="@+id/v_line_accessory"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/common_gray_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_accessory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/global_gray_0"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_accessory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/DIP_10"
+                        android:gravity="center"
+                        android:text="有无此附件"
+                        android:textColor="@color/global_gray_6"
+                        android:textSize="@dimen/text_14sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_gray_line"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/DIP_10">
+
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflAccessory"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/common_gray_line"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

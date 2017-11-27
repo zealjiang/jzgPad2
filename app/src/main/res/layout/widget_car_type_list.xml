@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_50"
+        android:gravity="center"
+        android:background="@color/common_bg_gray"
+        android:text="备选款型（剩余）"
+        android:textColor="@color/common_blue_dark"
+        android:textSize="@dimen/text_medium_16sp"/>
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerHeight"
+        android:background="@color/common_gray_line"/>
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/DIP_10"
+        android:text="未查询到指定车型，请仔细核对查询条件是否正确或联系支持人员解决"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_medium_16sp"
+        android:visibility="gone"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+</LinearLayout>

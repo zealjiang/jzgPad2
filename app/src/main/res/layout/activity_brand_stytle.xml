@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+    <include
+        layout="@layout/activity_title_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
+    <RelativeLayout
+        android:id="@+id/ll_brand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <ListView
+            android:id="@+id/brand_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/common_text_gray_dark"
+            android:dividerHeight="@dimen/dividerHeight"
+            android:listSelector="@null"
+            android:paddingRight="@dimen/paddingRight"
+            android:scrollbars="none" />
+        <com.jcpt.jzg.padsystem.view.MyLetterListView
+            android:id="@+id/index_list"
+            android:layout_width="@dimen/DIP_30_L"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/DIP_2"
+            android:layout_marginTop="@dimen/DIP_2"
+            android:background="#40000000" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_stytle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <ListView
+            android:id="@+id/model_list"
+            android:layout_width="@dimen/DIP_300_L"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/common_text_gray_dark"
+            android:dividerHeight="@dimen/dividerHeight"
+            android:listSelector="@drawable/layout_click"
+            android:paddingRight="@dimen/paddingRight"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_arguments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_30_L"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/smaple_pading"
+            android:text="@string/transmission" />
+
+        <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+            android:id="@+id/tflTransmission"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/DIP_20"
+            zhy:max_select="1"></com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_30_L"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/smaple_pading"
+            android:text="@string/drive_mode" />
+
+        <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+            android:id="@+id/tflDriveMode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/DIP_20"
+            zhy:max_select="1"></com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_30_L"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/smaple_pading"
+            android:text="@string/paiqiliang" />
+
+        <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+            android:id="@+id/tflEngineCapacity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/DIP_10"
+            zhy:max_select="1"></com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DIP_30_L"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/DIP_10"
+            android:text="出厂日期" />
+
+        <TextView
+            android:id="@+id/productiontime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIP_5"
+            android:background="@drawable/input_1px_white"
+            android:drawableRight="@mipmap/arrow_gray"
+            android:gravity="left|center_vertical"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/DIP_50"
+            android:text="清空重选"
+            android:layout_weight="1.5"
+            android:textSize="@dimen/text_large_18sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/common_orange_light"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/DIP_50"
+            android:text="完成"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_18sp"
+            />
+    </LinearLayout>
+</LinearLayout>

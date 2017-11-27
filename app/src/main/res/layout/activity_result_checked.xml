@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_result_checked"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jcpt.jzg.padsystem.ui.activity.ResultCheckedActivity">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_line_middle"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:text="评估结果"
+                android:textSize="@dimen/text_large_20sp" />
+            <LinearLayout
+                android:id="@+id/ll_AccidentCheckQuexianxiang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="缺陷项"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/llAccidentQuexianxiang"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:layout_marginBottom="@dimen/DIP_5"
+                        android:layout_marginTop="@dimen/DIP_5"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未选择缺陷"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/DIP_10"
+                            android:paddingLeft="@dimen/DIP_4"
+                            android:paddingTop="@dimen/DIP_10"
+                            android:textSize="@dimen/text_medium_16sp" />
+                    </LinearLayout>
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflAccident"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_AppearanceCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="外观检查"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAppearanceCheckBg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflAppearanceCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        />
+                    <TextView
+                        android:id="@+id/tvAppearanceCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+
+                    <FrameLayout
+                        android:id="@+id/flAppearanceCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <include
+                            android:id="@+id/appearanceStarChecked1"
+                            layout="@layout/ic_1starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/appearanceStarChecked2"
+                            layout="@layout/ic_2starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/appearanceStarChecked3"
+                            layout="@layout/ic_3starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/appearanceStarChecked4"
+                            layout="@layout/ic_4starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/appearanceStarChecked5"
+                            layout="@layout/ic_5starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_AccidentCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="事故检查"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAccidentCheckBg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:gravity="center_vertical"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflAccidentCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        />
+                    <TextView
+                        android:id="@+id/tvAccidentCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+
+                    <FrameLayout
+                        android:id="@+id/flAccidentCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <include
+                            android:id="@+id/accidentStarChecked1"
+                            layout="@layout/ic_1starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/accidentStarChecked2"
+                            layout="@layout/ic_2starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/accidentStarChecked3"
+                            layout="@layout/ic_3starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/accidentStarChecked4"
+                            layout="@layout/ic_4starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/accidentStarChecked5"
+                            layout="@layout/ic_5starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_EngineCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="机舱检查"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEngineCheckBg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflEngineCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        />
+                    <TextView
+                        android:id="@+id/tvEngineCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+
+                    <FrameLayout
+                        android:id="@+id/flEngineCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <include
+                            android:id="@+id/engineStarChecked1"
+                            layout="@layout/ic_1starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/engineStarChecked2"
+                            layout="@layout/ic_2starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/engineStarChecked3"
+                            layout="@layout/ic_3starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/engineStarChecked4"
+                            layout="@layout/ic_4starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/engineStarChecked5"
+                            layout="@layout/ic_5starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_DecorateCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="内饰检查"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDecorateCheckBg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflDecorateCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        />
+                    <TextView
+                        android:id="@+id/tvDecorateCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+
+                    <FrameLayout
+                        android:id="@+id/flDecorateCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <include
+                            android:id="@+id/decorateCheckStarChecked1"
+                            layout="@layout/ic_1starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/decorateCheckStarChecked2"
+                            layout="@layout/ic_2starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/decorateCheckStarChecked3"
+                            layout="@layout/ic_3starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/decorateCheckStarChecked4"
+                            layout="@layout/ic_4starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/decorateCheckStarChecked5"
+                            layout="@layout/ic_5starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ElectricalCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="电气检查"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llElectricalCheckBg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflElectricalCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        />
+                    <TextView
+                        android:id="@+id/tvElectricalCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+
+                    <FrameLayout
+                        android:id="@+id/flElectricalCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <include
+                            android:id="@+id/electricalCheckStarChecked1"
+                            layout="@layout/ic_1starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/electricalCheckStarChecked2"
+                            layout="@layout/ic_2starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/electricalCheckStarChecked3"
+                            layout="@layout/ic_3starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/electricalCheckStarChecked4"
+                            layout="@layout/ic_4starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/electricalCheckStarChecked5"
+                            layout="@layout/ic_5starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_ChassisCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="底盘检查"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llChassisCheckBg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflChassisCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        />
+                    <TextView
+                        android:id="@+id/tvChassisCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+
+                    <FrameLayout
+                        android:id="@+id/flChassisCheck"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <include
+                            android:id="@+id/chassisCheckStarChecked1"
+                            layout="@layout/ic_1starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/chassisCheckStarChecked2"
+                            layout="@layout/ic_2starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/chassisCheckStarChecked3"
+                            layout="@layout/ic_3starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/chassisCheckStarChecked4"
+                            layout="@layout/ic_4starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/chassisCheckStarChecked5"
+                            layout="@layout/ic_5starchecked"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/DIP_7"
+                            android:layout_marginTop="@dimen/DIP_7"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="火烧迹象"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFireBg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvFire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflFire"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="泡水迹象"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llWaterBg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvWater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+                    <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+                        android:id="@+id/tflwater"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:clickable="false"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="市场保有量"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvMarketOwnership"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="市场认可度"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvMarketAcceptance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/black_overlay_11">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="市场保值率"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvMarketHedgeRatio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="其他信息"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11">
+
+                    <TextView
+                        android:id="@+id/tvOtherInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:textSize="@dimen/text_medium_16sp" />
+
+                    <TextView
+                        android:id="@+id/view_line_otherInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/DIP_4"
+                        android:text=" -"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_NameplateProperty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="车身铭牌"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNameplateProperty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:text=""
+                        android:textSize="@dimen/text_medium_16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Vin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="车架号VIN"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvVinOtherInfoChecked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:text=""
+                        android:textSize="@dimen/text_medium_16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Tyre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="轮胎规格"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTyre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:text=""
+                        android:textSize="@dimen/text_medium_16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_DrivingLicenseCheckEx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_16"
+                        android:paddingTop="@dimen/DIP_16"
+                        android:text="行驶证车辆照片"
+                        android:textSize="@dimen/text_large_20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/DIP_5"
+                    android:layout_marginLeft="@dimen/DIP_30"
+                    android:layout_marginTop="@dimen/DIP_5"
+                    android:layout_weight="8"
+                    android:background="@color/black_overlay_11"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDrivingLicenseCheckEx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/DIP_10"
+                        android:paddingLeft="@dimen/DIP_4"
+                        android:paddingTop="@dimen/DIP_10"
+                        android:text=""
+                        android:textSize="@dimen/text_medium_16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/DIP_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_line_middle"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/DIP_6"
+                    android:paddingTop="@dimen/DIP_6"
+                    android:text="评估价格"
+                    android:textSize="@dimen/text_large_20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/DIP_10"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/DIP_5"
+                        android:layout_weight="1"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/DIP_10"
+                            android:paddingTop="@dimen/DIP_10"
+                            android:text="车商收车价:"
+                            android:textSize="@dimen/text_medium_16sp" />
+
+                        <TextView
+                            android:id="@+id/tvAssessmentPrace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/DIP_10"
+                            android:paddingTop="@dimen/DIP_10"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_medium_16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/DIP_10"
+                            android:paddingTop="@dimen/DIP_10"
+                            android:text="万元"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_medium_16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/DIP_5"
+                        android:layout_weight="1"
+                        android:background="@color/black_overlay_11"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/DIP_10"
+                            android:paddingTop="@dimen/DIP_10"
+                            android:text="车商售车价:"
+                            android:textSize="@dimen/text_medium_16sp" />
+
+                        <TextView
+                            android:id="@+id/tvSalePrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/DIP_10"
+                            android:paddingTop="@dimen/DIP_10"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_medium_16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/DIP_10"
+                            android:paddingTop="@dimen/DIP_10"
+                            android:text="万元"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_medium_16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/DIP_10"
+                    android:background="@color/gray_line_middle"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/DIP_6"
+                    android:paddingTop="@dimen/DIP_6"
+                    android:text="基本信息"
+                    android:textSize="@dimen/text_large_20sp" />
+                <com.jcpt.jzg.padsystem.widget.CustomRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:background="@color/black_overlay_11"
+                    android:layout_marginTop="@dimen/DIP_10"
+                    android:layout_marginBottom="@dimen/DIP_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

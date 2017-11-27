@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/DIP_50"
+    android:layout_height="@dimen/DIP_50"
+    android:layout_marginLeft="@dimen/DIP_5"
+    android:layout_marginRight="@dimen/DIP_5"
+    android:layout_marginTop="@dimen/DIP_5"
+    android:layout_marginBottom="@dimen/DIP_5"
+    android:background="@drawable/tag_selector"
+    android:padding="@dimen/DIP_5"
+    android:gravity="center"
+    android:textSize="@dimen/SP_14_L"
+    android:textColor="@drawable/tag_text_color">
+
+</TextView>

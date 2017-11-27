@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zhy="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/btn_next_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_gray_dark_middle"
+                android:padding="@dimen/DIP_8"
+                android:text="随车附件"
+                android:textColor="@color/black_font"
+                android:textSize="@dimen/text_medium_14sp" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/trunkShieldPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="行李箱遮挡板"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/spareTire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="备胎"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/antiTheftScrew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="防盗螺栓"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/liftingJack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="千斤顶"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/wheelBoltWrench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="车轮螺栓扳手"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/inflatableSuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="充气套件"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/toolKit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="工具包"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/firstAidKit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="急救包"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/warningTriangleMark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="警示三角标志"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/licensePlateRack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="牌照架"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/antenna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="天线"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/backRowPad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="后排PAD"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/padCharger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="PAD充电器"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/portableCharger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="便携式充电器NEV"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/headPillow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="头枕"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2"
+                app:tagVal4="3"
+                app:tagVal5="4"
+                app:tagVal6="5" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/aromatherapyBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="香薰盒"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2"
+                app:tagVal4="3" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/cigaretteLighter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="点烟器"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/startDoorMat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="原厂脚垫"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2"
+                app:tagVal4="3"
+                app:tagVal5="4" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/ashtray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="烟灰缸"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2"
+                app:tagVal4="3"
+                app:tagVal5="4" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/remoteControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="遥控器"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/headset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="耳机"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/reflectiveVest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="反光背心"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/usbCharger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="USB充电器"
+                app:tagVal1="0"
+                app:tagVal2="1"
+                app:tagVal3="2" />
+
+            <com.jcpt.jzg.padsystem.widget.BmwCarGoodsItemView
+                android:id="@+id/fireExtinguisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:labelCar="灭火器"
+                app:tagVal1="0"
+                app:tagVal2="1" />
+
+        </LinearLayout>
+    </ScrollView>
+    <com.jcpt.jzg.padsystem.widget.CustomRippleButton
+        android:id="@+id/tvNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_next_height"
+        android:background="@drawable/btn_blue_bg"
+        android:layout_alignParentBottom="true"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large_18sp"
+        zhy:unpressed_color="@color/common_btn_blue"
+        zhy:ripple_color="@color/common_blue_dark"/>
+
+</RelativeLayout>

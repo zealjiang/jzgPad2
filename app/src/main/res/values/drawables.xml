@@ -1,0 +1,8 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="ic_menu_task" type="drawable">@drawable/ic_my_tasku</item>
+    <item name="ic_menu_modify" type="drawable">@drawable/ic_modify_pwd</item>
+    <item name="ic_menu_exit" type="drawable">@drawable/ic_exit</item>
+    <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
+    <item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item>
+    <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
+</resources>

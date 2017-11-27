@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/common_blue_dark">
+
+        <com.jcpt.jzg.padsystem.widget.CustomButton
+            android:id="@+id/btnSave"
+            android:layout_width="64dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium_16sp"
+            app:round_radius="5dp"
+            app:pressed_color="@color/menu_dark_blue"
+            app:shape_type="rectangle"
+            app:unpressed_color="@color/common_btn_blue" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="说明：本检测项重点查看修复缺陷"
+        android:layout_marginTop="@dimen/DIP_20"
+        android:layout_marginLeft="@dimen/DIP_20"
+        android:layout_marginRight="@dimen/DIP_20"
+        android:textColor="@color/black"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvFlaws"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/DIP_20"
+         />
+
+
+
+
+</LinearLayout>

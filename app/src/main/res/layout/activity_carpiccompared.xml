@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2f7dc8">
+
+        <TextView
+            android:id="@+id/title_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="车辆参配"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large_20sp" />
+
+        <ImageView
+            android:id="@+id/title_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_gf_back" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_line_middle" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_bg_gray"
+        android:minHeight="@dimen/DIP_40_L"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/DIP_170_L"
+            android:layout_height="@dimen/DIP_145_L"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/menu_dark_blue"
+                android:gravity="center"
+                android:text="车辆照片"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <com.jcpt.jzg.padsystem.view.MySyncHorizontalScrollView
+            android:id="@+id/mytable_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:paddingLeft="@dimen/DIP_2"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_hrz"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIP_145_L"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </com.jcpt.jzg.padsystem.view.MySyncHorizontalScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_1"
+        android:background="@color/common_bg_gray" />
+
+    <ScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:scrollbars="none">
+        <!-- 左边listview -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+            <!--名称这列的ListView-->
+            <com.jcpt.jzg.padsystem.view.MyListView
+                android:id="@+id/contentListViewLeft"
+                android:layout_width="@dimen/DIP_170_L"
+                android:layout_height="match_parent" />
+            <!-- 右边listview -->
+
+            <com.jcpt.jzg.padsystem.view.MySyncHorizontalScrollView
+                android:id="@+id/rightContentHorscrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIP_170_L"
+                android:background="@android:color/transparent"
+                android:scrollbars="none">
+
+                <com.jcpt.jzg.padsystem.view.MyListView
+                    android:id="@+id/contentListViewRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/DIP_1"
+                    android:layout_marginRight="@dimen/DIP_5"
+                    android:background="@android:color/transparent"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:fadingEdge="none"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollbars="none" />
+
+            </com.jcpt.jzg.padsystem.view.MySyncHorizontalScrollView>
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

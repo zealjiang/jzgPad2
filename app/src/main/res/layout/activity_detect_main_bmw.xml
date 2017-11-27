@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jcpt.jzg.padsystem.ui.activity.DetectMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/common_blue_dark">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_back" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/DIP_100_L"
+            android:layout_marginRight="@dimen/DIP_100_L"
+            app:tabPaddingStart="0dp"
+            app:tabPaddingEnd="0dp"
+            app:tabIndicatorColor="@color/common_yellow"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white"
+            app:tabMinWidth="@dimen/DIP_80_L"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btnMaintenance"
+                android:layout_width="@dimen/DIP_50"
+                android:layout_height="@dimen/DIP_30"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/DIP_8"
+                android:text="维保"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium_14sp"
+                android:background="@drawable/btn_bg_selector_blue"
+                />
+            <Button
+                android:id="@+id/btnInsUseRecord"
+                android:layout_width="@dimen/DIP_50"
+                android:layout_height="@dimen/DIP_30"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/DIP_8"
+                android:text="出险"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium_14sp"
+                android:background="@drawable/btn_bg_selector_blue"
+                />
+            <Button
+                android:id="@+id/btnTrafficPeccancy"
+                android:layout_width="@dimen/DIP_50"
+                android:layout_height="@dimen/DIP_30"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/DIP_8"
+                android:text="违章"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium_14sp"
+                android:background="@drawable/btn_bg_selector_blue"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.jcpt.jzg.padsystem.widget.NoScrollViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

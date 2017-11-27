@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:id="@+id/rLayoutTaskClaimBack"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_gf_back"
+                />
+
+        </RelativeLayout>
+
+        <com.jcpt.jzg.padsystem.widget.ClearableEditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tvSearch"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:layout_margin="4dp"
+            android:hint="搜索"
+            android:imeOptions="actionSearch|flagNoExtractUi"
+            android:maxLength="50"
+            android:minWidth="@dimen/DIP_200_L"
+            android:paddingLeft="@dimen/DIP_8"
+            android:paddingRight="@dimen/DIP_8"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/common_text_gray_dark"
+            android:textSize="@dimen/SP_13_L" />
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="搜索"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+    <com.cjj.MaterialRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/DIP_16"
+        android:paddingLeft="@dimen/DIP_16"
+        android:paddingRight="@dimen/DIP_16"
+        android:paddingTop="@dimen/DIP_5"
+        app:overlay="false"
+        app:wave_show="false"
+        app:isLoadMore="true"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvTaskClaimList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </com.cjj.MaterialRefreshLayout>
+
+</LinearLayout>

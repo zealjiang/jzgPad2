@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/modle_img"
+        android:layout_width="@dimen/DIP_60_L"
+        android:layout_height="@dimen/DIP_60_L"
+        android:layout_marginLeft="@dimen/DIP_5"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:failureImage="@drawable/ic_load_failed"
+        fresco:failureImageScaleType="centerCrop"
+        />
+    <TextView
+        android:id="@+id/addexam_list_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/DIP_10"
+        android:padding="@dimen/DIP_8"
+        android:layout_toRightOf="@id/modle_img"
+        android:textSize="@dimen/SP_16_L" />
+</RelativeLayout>

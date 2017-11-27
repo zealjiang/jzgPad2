@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <com.jcpt.jzg.padsystem.view.HackyViewPager
+        android:id="@+id/viewpager_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/DIP_15"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/viewGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mycar_details_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIP_50"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/DIP_50"
+            android:layout_height="match_parent"
+            android:onClick="mycar_details_back" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/DIP_15"
+                android:src="@drawable/icon_back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mycar_details_bottom_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/DIP_20"
+        android:layout_marginLeft="@dimen/DIP_10"
+        android:text=""
+        android:textColor="@color/white"
+        />
+
+    <RelativeLayout
+        android:layout_width="@dimen/DIP_50"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/DIP_20"
+        android:onClick="download"
+        android:layout_alignBottom="@id/mycar_details_bottom_textview"
+        >
+
+        <ImageView
+            android:id="@+id/mycar_details_bottom_download_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/download" 
+            android:layout_marginBottom="3dp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

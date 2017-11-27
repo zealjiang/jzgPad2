@@ -1,0 +1,290 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="style_common_edittext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/DIP_50</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:paddingLeft">@dimen/DIP_10</item>
+        <item name="android:paddingRight">@dimen/DIP_10</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@color/common_text_gray_dark</item>
+    </style>
+
+    <style name="style_common_blue_round_corner_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/DIP_50</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_medium_16sp</item>
+        <item name="unpressed_color">@color/common_theme_blue</item>
+        <item name="ripple_color">@color/colorPrimaryDark</item>
+        <item name="round_radius">3dp</item>
+    </style>
+    <style name="style_blue_round_corner_button">
+        <item name="unpressed_color">@color/common_theme_blue</item>
+        <item name="ripple_color">@color/colorPrimaryDark</item>
+        <item name="round_radius">@dimen/DIP_5</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="tvTaskClaimList">
+        <item name="android:textColor">#525252</item>
+        <item name="android:textSize">@dimen/text_medium_14sp</item>
+    </style>
+    <style name="MyDialogStyleTop1"  parent="@android:style/Theme.Holo.Light">
+
+        <item name="android:windowAnimationStyle">@style/AnimTop3</item>
+        <!--<item name="android:windowFrame">@null</item>边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <!-- <item name="android:windowFullscreen">true</item> -->
+        <item name="android:windowIsTranslucent">true</item><!--透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <style name="AnimTop3" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_top_in2</item>
+    </style>
+    <style name="AnimTop2" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_top_in2</item>
+        <item name="android:windowExitAnimation">@anim/push_top_out2</item>
+    </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">21dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="car_type_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/DIP_60_L</item>
+        <item name="android:textColor">@color/common_theme_blue</item>
+        <item name="android:textSize">@dimen/SP_20_L</item>
+        <item name="android:background">@color/global_gray_0</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MyDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--  边框  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--  是否浮现在activity之上  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--  半透明  -->
+        <item name="android:windowNoTitle">true</item>
+        <!--  无标题  -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--  背景透明  -->
+
+    </style>
+    <style name="MyDialogStyleBottom" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--  边框  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--  是否浮现在activity之上  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--  半透明  -->
+        <item name="android:windowNoTitle">true</item>
+        <!--  无标题  -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--  背景透明  -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--  模糊  -->
+    </style>
+    <style name="MyDialogStyleTop" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/AnimRight</item>
+        <!--  边框  -->
+        <item name="android:windowFrame">@null</item>
+        <!--  是否浮现在activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--  半透明  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--  无标题  -->
+        <item name="android:windowNoTitle">true</item>
+        <!--  背景透明  -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--  模糊  -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="MyUploadDialogStyleTop" parent="android:Theme.Dialog">
+        <!--<item name="android:windowAnimationStyle">@style/AnimRight</item>-->
+        <!--  边框  -->
+        <item name="android:windowFrame">@null</item>
+        <!--  是否浮现在activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--  半透明  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--  无标题  -->
+        <item name="android:windowNoTitle">true</item>
+        <!--  背景透明  -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--  模糊  -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AnimRight" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_right_in</item>
+        <item name="android:windowExitAnimation">@anim/push_right_out</item>
+    </style>
+
+    <style name="photo_procedure_thumbnail">
+        <item name="android:layout_width">@dimen/DIP_145_L</item>
+        <item name="android:layout_height">@dimen/DIP_115_L</item>
+        <item name="placeholderImage">@drawable/xiangji</item>
+        <item name="placeholderImageScaleType">fitCenter</item>
+        <item name="actualImageScaleType">centerCrop</item>
+        <item name="failureImage">@drawable/ic_load_failed</item>
+        <item name="failureImageScaleType">centerCrop</item>
+        <item name="progressBarImage">@drawable/ic_loading</item>
+        <item name="progressBarImageScaleType">centerCrop</item>
+        <item name="progressBarAutoRotateInterval">100000</item>
+    </style>
+
+    <style name="otherInfo">
+        <item name="android:layout_width">@dimen/DIP_200_L</item>
+        <item name="android:layout_height">@dimen/DIP_150</item>
+        <item name="android:layout_marginRight">@dimen/DIP_15</item>
+        <item name="placeholderImageScaleType">centerCrop</item>
+        <item name="failureImage">@drawable/ic_load_failed</item>
+        <item name="failureImageScaleType">centerCrop</item>
+        <item name="progressBarImage">@drawable/ic_loading</item>
+        <item name="progressBarImageScaleType">centerCrop</item>
+        <item name="progressBarAutoRotateInterval">100000</item>
+       <!-- <item name="android:scaleType">centerCrop</item>-->
+    </style>
+
+
+    <style name="simpledraweeview">
+        <item name="placeholderImage">@drawable/xiangji</item>
+        <item name="placeholderImageScaleType">centerCrop</item>
+        <item name="failureImage">@drawable/ic_load_failed</item>
+        <item name="failureImageScaleType">centerCrop</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="progressBarImage">@drawable/ic_loading</item>
+        <item name="progressBarImageScaleType">centerCrop</item>
+        <item name="progressBarAutoRotateInterval">1000000</item>
+    </style>
+    <style name="simpledraweeview_subjion">
+        <item name="placeholderImage">@drawable/jiahaopic</item>
+        <item name="placeholderImageScaleType">fitCenter</item>
+        <item name="failureImage">@drawable/ic_load_failed</item>
+        <item name="failureImageScaleType">centerCrop</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="progressBarImage">@drawable/ic_loading</item>
+        <item name="progressBarImageScaleType">centerCrop</item>
+        <item name="progressBarAutoRotateInterval">1000000</item>
+    </style>
+
+
+
+    <style name="tv_left_gray_bg">
+        <item name="android:layout_width">@dimen/DIP_120_L</item>
+        <item name="android:background">@color/common_bg_gray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/DIP_10</item>
+        <item name="android:textSize">@dimen/text_medium_16sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="rb_style">
+        <item name="android:background">@drawable/btn_bg_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:padding">@dimen/DIP_1</item>
+        <item name="android:textColor">@drawable/btn_text_selector</item>
+        <item name="android:textSize">@dimen/text_medium_16sp</item>
+    </style>
+    <style name="et_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">@dimen/DIP_4</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textSize">@dimen/text_medium_16sp</item>
+    </style>
+
+    <style name="history_price_rv_title">
+
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_large_20sp</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+<!-- activity dialog样式 -->
+    <style name="Theme.ActivityDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- RadioButton 是/否-->
+    <style name="radioButton">
+        <item name="android:layout_width">@dimen/DIP_100_L</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rb_bg_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!-- 滚轮 -->
+    <style name="custom_dialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+    <style name="pickerview_dialogAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pickerview_dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/pickerview_dialog_scale_out</item>
+    </style>
+</resources>

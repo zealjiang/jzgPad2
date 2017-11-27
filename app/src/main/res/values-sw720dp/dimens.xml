@@ -1,0 +1,129 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">19.2dp</dimen>
+    <dimen name="activity_vertical_margin">19.2dp</dimen>
+
+    <dimen name="left_list_width">132.0dp</dimen>
+    <dimen name="left_list_item_height">72.0dp</dimen>
+    <!-- 大字体 -->
+    <dimen name="text_large_20sp">24.0sp</dimen>
+    <dimen name="text_large_18sp">21.599999999999998sp</dimen>
+    <!-- 普通字体 -->
+    <dimen name="text_medium_16sp">19.2sp</dimen>
+    <dimen name="text_medium_14sp">16.8sp</dimen>
+    <dimen name="text_14sp">16.8sp</dimen>
+    <dimen name="text_13sp">15.6sp</dimen>
+    <!-- 小字体 -->
+    <dimen name="text_small_12sp">14.399999999999999sp</dimen>
+    <dimen name="text_small_10sp">12.0sp</dimen>
+
+    <dimen name="btn_radius">2.4dp</dimen>
+    <dimen name="round_radius">0.0dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">19.2dp</dimen>
+    <dimen name="nav_header_height">192.0dp</dimen>
+    <dimen name="fab_margin">19.2dp</dimen>
+
+    <!-- ListView相关配置-->
+    <dimen name="dividerHeight">1.2px</dimen>
+    <dimen name="paddingRight">6.0dp</dimen>
+    <dimen name="btn_height">60.0dp</dimen>
+    <dimen name="btn_margin">24.0dp</dimen>
+    <dimen name="smaple_pading">12.0dp</dimen>
+    <dimen name="text_padding_left">12.0dp</dimen>
+
+    <!-- layout下布局 fragment_other.xml 里 RecyclerView 的宽度-->
+    <dimen name="fragment_other_rv_width">192.0dp</dimen>
+    <!-- layout下布局 tv.xml 里  tv 的 margin-->
+    <dimen name="tv_margin">6.0dp</dimen>
+    <!-- layout下布局 fragment_other_information.xml 里的padding-->
+    <dimen name="fragment_other_information_padding">12.0dp</dimen>
+    <!-- layout下布局 fragment_other_information.xml 里的已填信息和实车信息中间View的宽度-->
+    <dimen name="fragment_other_information_view_width">1.2dp</dimen>
+
+    <!-- layout下布局 fragment_detection.xml 里 RecyclerView 的宽度-->
+    <dimen name="fragment_detection_rv_width">192.0dp</dimen>
+
+    <dimen name="procedure_padding_left">12.0dp</dimen>
+
+    <dimen name="test_100">120.0dp</dimen>
+
+    <dimen name="btn_next_height">60.0dp</dimen>
+
+
+    <dimen name="DIP_540_L">648.0dp</dimen>
+    <dimen name="DIP_360_L">432.0dp</dimen>
+    <dimen name="DIP_300_L">360.0dp</dimen>
+    <dimen name="DIP_200_L">240.0dp</dimen>
+    <dimen name="DIP_120_L">144.0dp</dimen>
+    <dimen name="DIP_115_L">138.0dp</dimen>
+    <dimen name="DIP_90_L">108.0dp</dimen>
+    <dimen name="DIP_85_L">102.0dp</dimen>
+    <dimen name="DIP_80_L">96.0dp</dimen>
+    <dimen name="DIP_72_L">86.39999999999999dp</dimen>
+    <dimen name="DIP_70_L">84.0dp</dimen>
+    <dimen name="DIP_60_L">72.0dp</dimen>
+    <dimen name="DIP_64_L">76.8dp</dimen>
+    <dimen name="DIP_49_L">58.8dp</dimen>
+    <dimen name="DIP_24_L">28.799999999999997dp</dimen>
+    <dimen name="DIP_1_L">1.2dp</dimen>
+    <dimen name="SP_42_L">50.4sp</dimen>
+    <dimen name="SP_36_L">43.199999999999996sp</dimen>
+    <dimen name="SP_35_L">42.0sp</dimen>
+    <dimen name="SP_26_L">31.2sp</dimen>
+    <dimen name="SP_24_L">28.799999999999997sp</dimen>
+    <dimen name="SP_20_L">24.0sp</dimen>
+    <dimen name="SP_18_L">21.599999999999998sp</dimen>
+    <dimen name="SP_15_L">18.0sp</dimen>
+    <dimen name="SP_16_L">19.2sp</dimen>
+    <dimen name="SP_14_L">16.8sp</dimen>
+    <dimen name="SP_13_L">15.6sp</dimen>
+    <dimen name="SP_10_L">12.0sp</dimen>
+
+
+    <dimen name="DIP_180">216.0dp</dimen>
+    <dimen name="DIP_160">192.0dp</dimen>
+    <dimen name="DIP_165">198.0dp</dimen>
+    <dimen name="DIP_150">180.0dp</dimen>
+    <dimen name="DIP_140">168.0dp</dimen>
+    <dimen name="DIP_135">162.0dp</dimen>
+    <dimen name="DIP_130">156.0dp</dimen>
+    <dimen name="DIP_170_L">204.0dp</dimen>
+    <dimen name="DIP_100_L">120.0dp</dimen>
+    <dimen name="DIP_145_L">174.0dp</dimen>
+    <dimen name="DIP_24">28.799999999999997dp</dimen>
+    <dimen name="DIP_50">60.0dp</dimen>
+    <dimen name="DIP_51">61.199999999999996dp</dimen>
+    <dimen name="DIP_48">57.599999999999994dp</dimen>
+    <dimen name="DIP_46">55.199999999999996dp</dimen>
+    <dimen name="DIP_45">54.0dp</dimen>
+    <dimen name="DIP_44">52.8dp</dimen>
+    <dimen name="DIP_40">48.0dp</dimen>
+    <dimen name="DIP_30">36.0dp</dimen>
+    <dimen name="DIP_40_L">48.0dp</dimen>
+    <dimen name="DIP_36_L">43.199999999999996dp</dimen>
+    <dimen name="DIP_35_L">42.0dp</dimen>
+    <dimen name="DIP_30_L">36.0dp</dimen>
+    <dimen name="DIP_25">30.0dp</dimen>
+    <dimen name="DIP_20">24.0dp</dimen>
+    <dimen name="DIP_18">21.599999999999998dp</dimen>
+    <dimen name="DIP_10">12.0dp</dimen>
+    <dimen name="DIP_17">20.4dp</dimen>
+    <dimen name="DIP_16">19.2dp</dimen>
+    <dimen name="DIP_15">18.0dp</dimen>
+    <dimen name="DIP_14">16.8dp</dimen>
+    <dimen name="DIP_13">15.6dp</dimen>
+    <dimen name="DIP_12">14.399999999999999dp</dimen>
+    <dimen name="DIP_8">9.6dp</dimen>
+    <dimen name="DIP_7">8.4dp</dimen>
+    <dimen name="DIP_6">7.199999999999999dp</dimen>
+    <dimen name="DIP_5">6.0dp</dimen>
+    <dimen name="DIP_4">4.8dp</dimen>
+    <dimen name="DIP_2">2.4dp</dimen>
+    <dimen name="DIP_1">1.2dp</dimen>
+
+
+
+
+</resources>
+

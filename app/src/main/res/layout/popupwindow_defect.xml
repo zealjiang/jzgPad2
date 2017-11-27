@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/common_blue_dark">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large_18sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="缺陷选择"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large_18sp" />
+        </LinearLayout>
+
+        <com.jcpt.jzg.padsystem.widget.CustomButton
+            android:id="@+id/btnComplete"
+            android:layout_width="64dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium_16sp"
+            app:pressed_color="@color/menu_dark_blue"
+            app:round_radius="5dp"
+            app:shape_type="rectangle"
+            app:unpressed_color="@color/common_btn_blue" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCheckItemkDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/DIP_20"
+        android:layout_marginLeft="@dimen/DIP_30"
+        android:layout_marginTop="@dimen/DIP_20"
+        android:text="说明："
+        android:visibility="visible"
+        android:textSize="12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/DIP_30"
+        android:layout_marginRight="@dimen/DIP_30"
+        android:visibility="visible"
+        android:background="@color/gray_line_middle" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/DIP_30"
+        android:layout_marginRight="@dimen/DIP_30"/>
+
+
+</LinearLayout>

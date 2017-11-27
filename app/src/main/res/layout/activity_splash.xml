@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.jcpt.jzg.padsystem.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/tvSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_splash"
+        android:scaleType="centerCrop"
+         />
+
+</RelativeLayout>

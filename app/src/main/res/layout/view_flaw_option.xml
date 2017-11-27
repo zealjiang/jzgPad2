@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    >
+    <TextView
+        android:id="@+id/tvFlawItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="表面缺陷"
+        android:textSize="@dimen/text_medium_14sp"
+        android:layout_marginTop="@dimen/DIP_14"
+        android:textColor="@color/common_btn_blue"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        >
+        <com.jcpt.jzg.padsystem.widget.tag.TagFlowLayout
+            android:id="@+id/tflFlawType"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            zhy:gravity="left"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlFlawPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

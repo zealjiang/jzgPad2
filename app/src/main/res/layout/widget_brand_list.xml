@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/brand_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/common_gray_line"
+        android:dividerHeight="@dimen/dividerHeight"
+        android:listSelector="@null"
+        android:paddingRight="@dimen/paddingRight"
+        android:scrollbars="none"/>
+
+    <com.jcpt.jzg.padsystem.view.MyLetterListView
+        android:id="@+id/index_list"
+        android:layout_width="@dimen/DIP_30"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#40000000"/>
+
+    <include
+        android:id="@+id/viewFragReload"
+        layout="@layout/view_frag_reload"
+        android:visibility="gone"/>
+</RelativeLayout>

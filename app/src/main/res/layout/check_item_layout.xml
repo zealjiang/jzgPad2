@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/rlDetectItem"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/DIP_50"
+              android:background="@drawable/drawable_check_blue"
+                >
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIP_20"
+        android:layout_centerVertical="true"
+        android:text="左前翼子板"
+        android:textSize="@dimen/text_medium_16sp"
+        />
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="@dimen/DIP_40"
+        android:layout_height="@dimen/DIP_40"
+        android:layout_marginRight="@dimen/DIP_15"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/fill_shanc_xzhong" />
+
+</RelativeLayout>

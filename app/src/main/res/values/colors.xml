@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/global_blue_3</color>
+    <color name="colorPrimaryDark">@color/global_blue_4</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay_33">#33000000</color>
+    <color name="black_overlay_11">#11000000</color>
+    <color name="common_green">@color/global_green_1</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="menu_item_selected">@color/global_blue_3</color>
+    <color name="menu_dark_blue">@color/global_gray_5</color>
+    <color name="menu_dark2_blue">@color/global_blue_6</color>
+    <color name="common_yellow">@color/global_orange_0</color>
+    <color name="light_blue_bg">@color/global_blue_0</color>
+    <color name="gray_line_middle">#55000000</color>
+    <color name="black_font">@color/global_black</color>
+    <color name="red_bg">#FF055D</color>
+    <color name="red_font">#E47597</color>
+    <color name="orange_bg1">#FDDAC6</color>
+    <color name="blue_bg">#CDDAF5</color>
+    <color name="green_bg">#C8F7EB</color>
+
+    <color name="global_blue">#169BD5</color>
+    <color name="global_green">#009900</color>
+    <color name="global_red">#FF0909</color>
+
+    <!--滚轮-->
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <color name="pickerview_bgColor_overlay">#60000000</color>
+    <color name="pickerview_bgColor_default">#FFFFFFFF</color>
+
+    <!--以下是已知公共组件颜色-->
+    <color name="common_gray_line">@color/global_gray_1</color>
+    <color name="common_theme_blue">@color/global_blue_3</color>
+    <color name="common_btn_blue">@color/global_blue_1</color>
+    <color name="common_blue_dark">@color/global_blue_2</color>
+    <color name="common_bg_gray">@color/global_gray_0</color>
+    <color name="common_orange_light">@color/global_orange_1</color>
+    <color name="common_orange_dark">@color/global_orange_2</color>
+    <color name="common_text_gray_dark">@color/global_gray_2</color>
+    <color name="common_gray_dark_middle">@color/global_gray_3</color>
+    <color name="white">@color/global_white</color>
+    <color name="black">@color/global_black</color>
+
+    <!--以下是基础颜色库，不允许新增，只允许引用！！！-->
+    <color name="global_transparent">@android:color/transparent</color>
+    <color name="global_white">@android:color/white</color>
+    <color name="global_black">@android:color/black</color>
+
+    <color name="global_gray_0">#f6f6f6</color>
+    <color name="global_gray_1">#dadee6</color>
+    <color name="global_gray_2">#696969</color>
+    <color name="global_gray_3">#A5A5A5</color>
+    <color name="global_gray_4">#3f3f3f</color>
+    <color name="global_gray_5">#f3f3f3</color>
+    <color name="global_gray_6">#333333</color>
+    <color name="global_gray_7">#9e9e9e</color>
+
+    <color name="global_blue_0">#EEF5FF</color>
+    <color name="global_blue_1">#3d95ff</color>
+    <color name="global_blue_2">#3F80E2</color>
+    <color name="global_blue_3">#3f6ed9</color>
+    <color name="global_blue_4">#303F9F</color>
+    <color name="global_blue_5">#0e3b61</color>
+    <color name="global_blue_6">#082a47</color>
+    <color name="global_blue_7">#58a7fb</color>
+
+    <color name="global_orange_0">#fac438</color>
+    <color name="global_orange_1">#ff5c11</color>
+    <color name="global_orange_2">#e0510f</color>
+
+    <color name="global_green_1">#33cf88</color>
+    <color name="red">#ff0000</color>
+    <color name="red1">#FF3030</color>
+    <color name="red_dark">#99ff0000</color>
+
+</resources>

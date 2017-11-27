@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/DIP_10">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/common_text_gray_dark"
+        android:text="2016年12月22日"
+        android:textSize="@dimen/text_medium_16sp"/>
+    <TextView
+        android:id="@+id/tvBuyPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/common_text_gray_dark"
+        android:text="19.6万元"
+        android:textSize="@dimen/text_medium_16sp"/>
+    <TextView
+        android:id="@+id/tvSellPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/common_text_gray_dark"
+        android:text="19.6万元"
+        android:textSize="@dimen/text_medium_16sp"/>
+    <TextView
+        android:id="@+id/tvArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/common_text_gray_dark"
+        android:text="易鑫北京"
+        android:textSize="@dimen/text_medium_16sp"/>
+</LinearLayout>
